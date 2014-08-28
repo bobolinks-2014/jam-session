@@ -8,7 +8,14 @@
 
 # Users
 
-User.create(first_name: "Christopher", last_name: "Walken", email: "needmore@cowbell.org", password: "testing", password_confirmation: "testing", img_url: 'http://i.ytimg.com/vi/ZNT9E3yNaDU/maxresdefault.jpg', description: 'I got a fevah, and the only prescription...is more cowbell', neighborhood_id: 2)
+User.create(first_name: "Christopher", 
+            last_name: "Walken", 
+            email: "needmore@cowbell.org", 
+            password: "testing", 
+            password_confirmation: "testing", 
+            img_url: 'http://i.ytimg.com/vi/ZNT9E3yNaDU/maxresdefault.jpg', 
+            description: 'I got a fevah, and the only prescription...is more cowbell', 
+            neighborhood_id: 2)
 
 User.create(first_name: "Axel", last_name: "Rose", email: "sweetchild@omine.org", password: "testing", password_confirmation: "testing", img_url: 'http://iv1.lisimg.com/image/2766251/600full-axl-rose.jpg', description: 'Nanananananannana neeee neeeee', neighborhood_id: 2)
 
@@ -25,12 +32,12 @@ User.create(first_name: "Tina", last_name: "Turner", email: "simplytheest@tina.o
 
 # Instruments
 
-Instrument.create(type: "Vocals")
-Instrument.create(type: "Guitar")
-Instrument.create(type: "Saxophone")
-Instrument.create(type: "Drums")
-Instrument.create(type: "Cowbell")
-Instrument.create(type: "Clarinet")
+Instrument.create(name: "Vocals")
+Instrument.create(name: "Guitar")
+Instrument.create(name: "Saxophone")
+Instrument.create(name: "Drums")
+Instrument.create(name: "Cowbell")
+Instrument.create(name: "Clarinet")
 
 
 # Neighborhoods
@@ -44,15 +51,33 @@ Neighborhood.create(name: 'River North')
 
 # Comments
 
-Comment.create(content: 'This guy was so great to play with.  Musical Genius')
+Comment.create(content: 'This guy was so great to play with.  Musical Genius', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
 
 
+Comment.create(content: 'Barf!', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
+
+Comment.create(content: 'Rock on dude!', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
 
 
+Comment.create(content: 'Smoooth', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
 
 
+Comment.create(content: 'Legendary skills...psyche!', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
 
 
+# user_instruments
+
+10.times do
+  UserInstrument.create(user_id: rand(1..7), instrument_id: rand(1..7), skill_level: rand(1..5))
+end
+
+# tag-list
+
+list = ['Jazz', 'Classical', 'Metal', 'Country', 'Blues', 'Punk']
+
+list.each do |tag|
+  ActsAsTaggableOn::Tag.create(name: tag)
+end
 
 
 
