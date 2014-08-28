@@ -1,6 +1,6 @@
-require_relative '../spec_helper.rb'
+require 'rails_helper'
 
-describe Comment do
+RSpec.describe Comment, :type => :model do
   it { should belong_to(:commenter).class_name("User") }
   it { should belong_to(:receiver).class_name("User") }
 end

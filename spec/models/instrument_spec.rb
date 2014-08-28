@@ -1,7 +1,6 @@
-require_relative '../spec_helper.rb'
+require 'rails_helper'
 
-describe Instrument do
+RSpec.describe Instrument, :type => :model do
   it { should have_many(:user_instruments) }
   it { should have_many(:users) }
-
 end
