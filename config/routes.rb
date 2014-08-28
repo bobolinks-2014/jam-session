@@ -16,6 +16,14 @@ JamSession::Application.routes.draw do
   #   resources :products
   resources :users
 
+  get '/:neighborhood' => 'neighborhoods#show'
+  # get '/hyde-park' => 'neighborhoods#show'
+  # get '/south-loop' => 'neighborhoods#show'
+  # get '/lakeview' => 'neighborhoods#show'
+  # get '/bucktown' => 'neighborhoods#show'
+  # get '/rogers-park' => 'neighborhoods#show'
+  # get '/river-north' => 'neighborhoods#show'
+
   # Example resource route with options:
   #   resources :products do
   #     member do
