@@ -1,7 +1,7 @@
-require_relative '../spec_helper.rb'
+require 'rails_helper'
 
-describe User do
-  it { should belong_to(:neighborhood) }
+RSpec.describe User, :type => :model do
+   it { should belong_to(:neighborhood) }
   it { should have_many(:user_instruments)}
   it { should have_many(:instruments).through(:user_instruments) }
   it { should have_many(:comments).with_foreign_key('commenter_id') }

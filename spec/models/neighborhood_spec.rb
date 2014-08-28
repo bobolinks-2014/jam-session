@@ -1,5 +1,5 @@
-require_relative '../spec_helper.rb'
+require 'rails_helper'
 
-describe Neighborhood do
+RSpec.describe Neighborhood, :type => :model do
   it { should have_many(:users) }
 end

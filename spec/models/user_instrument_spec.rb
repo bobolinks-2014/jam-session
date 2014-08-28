@@ -1,6 +1,6 @@
-require_relative '../spec_helper.rb'
+require 'rails_helper'
 
-describe UserInstrument do
+RSpec.describe UserInstrument, :type => :model do
   it { should belong_to(:user) }
   it { should belong_to(:instrument) }
   it { should validate_presence_of(:user_id) }
