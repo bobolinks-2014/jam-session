@@ -51,6 +51,8 @@ gem 'acts-as-taggable-on'
 group :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem "database_cleaner"
+  gem "capybara"
 end
 
 
