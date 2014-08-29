@@ -9,9 +9,16 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *= require_home
- *= require_tree .
+
+ *= require foundation_and_overrides
  *= require_self
+ *= require_tree .
+ *= require_home
+ *= require_neighborhood
+ *= require_users
+
+Foundation Cheat Sheet: https://princessdesign.net/foundation-cheat-sheet/#;
+
  */
 /* color scheme :
 purple - 333366
@@ -19,63 +26,9 @@ light grey - CCCCCC*/
 
 body {
   font-family: candara, sans-serif;
+}
+
+.container {
+  margin: 20px;
   margin-top: 70px;
 }
-
-nav {
-  position: fixed;
-  top: 0;
-  height: 70px;
-  width: 100%;
-  background-color: #333366;
-}
-
-ul .form {
-  float: right;
-  margin-top: 5px;
-  margin-right: 40px;
-}
-
-.nav-bar li {
-  display:inline;
-  float:left;
-  list-style: none;
-  padding: 5px;
-  margin-right: 8px;
-}
-
-ul .nav-bar{
-  float: right;
-}
-
-.nav-bar input {
-  border-radius: 2px;
-  padding: 3px 0px 3px 2px;
-}
-
-.nav-bar input[type="text"] {
-}
-
-.nav-bar input[type="submit"] {
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.nav-bar a {
-  text-decoration: none;
-  color: ghostwhite;
-}
-
-.nav-bar a:hover {
-  color: #2a9fd6;
-}
-
-.signup {
-  font-size: 20px;
-  position: relative;
-  top: 5px;
-  margin-right: 40px;
-  float: right;
-}
-
-
