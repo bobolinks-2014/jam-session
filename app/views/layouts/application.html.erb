@@ -1,35 +1,48 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>JamSession</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
   <header>
-    <nav>
-      <ul class="nav-bar">
-         <%= link_to "Sign Up", new_user_path, :class => "signup" %>
-      <% if logged_in? %>
-          <li><%= link_to "Profile", current_user %></li>
-          <li><%= link_to "Logout", logout_path %></li>
-      <% else %>
-          <div class="form">
+    <div class="fixed">
+    <nav class="top-bar">
+      <div class="right">
+        <ul>
+        <% if logged_in? %>
+            <li><%= button_to "Profile", current_user %></li>
+            <li><%= button_to "Logout", logout_path %></li>
+        <% else %>
             <%= form_for(:user, :url => {:controller => 'sessions', :action => 'login'}) do |f| %>
-            <%= f.email_field :email, :autofocus => true, placeholder: 'email' %>
-            <%= f. password_field :password, :autofocus => true, placeholder: 'password' %>
-            <%= f.submit 'Sign In' %>
+              <div class="small-4 columns">
+                <%= f.email_field :email, :autofocus => true, placeholder: 'email' %>
+              </div>
+              <div class="small-4 columns">
+                <%= f.password_field :password, :autofocus => true, placeholder: 'password' %>
+              </div>
+              <div class="small-2 columns">
+                <%= f.submit 'Sign In' %>
+              </div>
+              <div class="small-2 columns">
+                <%= button_to "Sign Up", new_user_path, :class => "signup" %>
+              </div>
             <% end %>
-          </div>
-      <% end %>
-      </ul>
+        <% end %>
+        </ul>
+      </div>
     </nav>
+    </div>
   </header>
-
-<%= yield %>
-
-</body>
+  <div class="container">
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>
-
-
