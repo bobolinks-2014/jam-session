@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe NeighborhoodsController, :type => :controller do
-  context 'when homepage is loaded' do
-    it 'loads the page' do
-      get :index
-      expect(response.status).to eq 200
+  context 'when user visits neighborhood page' do
+      it "opens to the neighborhood's page" do
+        visit '/hyde-park'
+        expect(response.status).to eq 200
+      end
     end
-  end
 end
