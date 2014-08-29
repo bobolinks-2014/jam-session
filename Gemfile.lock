@@ -57,11 +57,7 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.1)
-<<<<<<< HEAD
-    faker (1.4.3)
-=======
     faker (1.2.0)
->>>>>>> 0cd8eb1f8e0502c42c8409f5b5a9571ab7f79b4c
       i18n (~> 0.5)
     foundation-rails (5.4.2.0)
       railties (>= 3.1.0)
