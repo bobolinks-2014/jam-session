@@ -37,19 +37,28 @@ nav {
   color: ghostwhite;
 }
 
-nav h1{
+/*nav h1{
   float:left;
   width: 200px;
   margin-left: 50px;
   font-size:150%;
+}*/
+.nav-bar{
+  width: 100%;
+  float: right;
 }
-
 .nav-bar li {
   display:inline;
-  float:right;
+  float:left;
   list-style: none;
   padding: 5px;
-  margin-right: 10px;
+  margin-right: 8px;
+
+}
+
+ul .nav-bar{
+  float: right;
+
 }
 
 .nav-bar input {
