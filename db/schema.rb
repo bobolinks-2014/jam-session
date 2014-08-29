@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20140829154813) do
 
   # These are extensions that must be enabled in order to support this database
@@ -26,6 +27,16 @@ ActiveRecord::Schema.define(version: 20140829154813) do
   create_table "users", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+  create_table "comments", force: true do |t|
+    t.integer "commenter_id"
+    t.integer "reciever_id"
+  end
+
+  create_table "instruments", force: true do |t|
+  end
+
+  create_table "neighborhoods", force: true do |t|
   end
 
 end
