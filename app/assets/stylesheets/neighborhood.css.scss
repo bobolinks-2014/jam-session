@@ -6,7 +6,6 @@
 .neighborhood_container {
   margin-top: 40px;
   position: center;
-  height: 700px;
   padding: 40px;
   width: 100%;
   background-color: ghostwhite;
@@ -17,12 +16,19 @@
   position: center;
 }
 
-.small-block-grid {
+/*.image-grid {
    margin-top: 20px;
-}
+   border-bottom: 10px;
+   border-bottom-color: 333366;
+}*/
 
 .small-block-grid li{
   display: inline-block;
-  
+}
+
+.list-container {
+  background-color: CCCCCC;
+  position: center;
+  width: 80%;
 
 }

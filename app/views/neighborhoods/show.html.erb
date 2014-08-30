@@ -2,18 +2,28 @@
   <div class="main-title"></div>
       <h1>Musicians available in <%= @neighborhood.name %></h1>
 
-<div></div>
-<div class="image-grid">
-  <ul class="small-block-grid-5">
-  <li><%= image_tag('guitar.png') %></li>
-  <li><%= image_tag('microphone.png') %></li>
-  <li><%= image_tag('sax.png') %></li>
-  <li><%= image_tag('drum.png') %></li>
-  <li><%= image_tag('cowbell.png') %></li>
-</ul>
-</div>
-
-<div></div>
-
+  <div class="image-grid">
+    <ul class="small-block-grid-5">
+      <li><%= image_tag('guitar.png') %></li>
+      <li><%= image_tag('microphone.png') %></li>
+      <li><%= image_tag('sax.png') %></li>
+      <li><%= image_tag('drum.png') %></li>
+      <li><%= image_tag('cowbell.png') %></li>
+    </ul>
+  </div>
 
 </div>
+<div class="list-container">
+  <% @neighborhood.users.each do |user| %>
+    <div class="mini-user-profile-container">
+      <div class="profile-pic"><%=image_tag('user.img_url') %></div>
+      <div class="instruments-played"><%= user.instruments %></div>
+      <div class=""></div>  
+    </div>
+  <% end %>
+
+
+</div>
+
+
+
