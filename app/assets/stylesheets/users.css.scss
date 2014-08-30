@@ -1,1 +1,39 @@
+.public-container {
+  margin: 8px;
+  margin-top: 55px;
 
+}
+
+.public-user-left-container {
+  position: absolute;
+  height: 700px;
+  padding: 5px;
+  width: 20%;
+  background-color: ghostwhite;
+  border-radius: 2px;
+}
+
+.public-user-left-container img {
+  margin: 15px auto;
+  padding: 4px;
+  border: 2px solid #CCCCCC;
+  border-radius: 2px;
+  background-color: ghostwhite;
+}
+
+.public-user-left-container textarea {
+  margin: auto;
+  width: 220px;
+}
+
+.public-user-right-container {
+  float:right;
+  width: 79%;
+  height: 700px;
+  background-color: ghostwhite;
+}
+
+.public-user-right-container h1{
+  padding-left: 40px;
+  font-size: 3em;
+}
