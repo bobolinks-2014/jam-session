@@ -1,4 +1,4 @@
 namespace :db do
-  desc "TODO"
-  task yolo: [:environment,'db:drop', 'db:create', 'db:migrate', 'db:seed']
+  desc "drops, creates and migrates"
+  task yolo: [:environment,'db:drop', 'db:create', 'db:migrate']
 end

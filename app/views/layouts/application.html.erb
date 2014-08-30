@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>JamSession</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "JamSession" %></title>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation/foundation.js"></script>
+    <script src="js/foundation/foundation.orbit.js"></script>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
   <header>
     <nav>
     <div class="fixed">
@@ -15,6 +24,7 @@
         <ul>
         <% if logged_in? %>
             <div class="small-2 columns signup">
+            <div class="small-2 columns">
               <%= link_to "Profile", current_user %>
             </div>
             <div class="small-2 columns">
@@ -35,15 +45,14 @@
                 <%= f.submit 'Sign In' %>
               </div>
             <% end %>
-          </div>
-      <% end %>
-      </ul>
+        <% end %>
+        </ul>
+      </div>
     </nav>
+    </div>
   </header>
-
-<%= yield %>
-
-</body>
+    <%= yield %>
+  </div>
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>
-
-

@@ -13,4 +13,11 @@ class User < ActiveRecord::Base
    validates_presence_of :email, :password, :neighborhood
    validates_confirmation_of :password
    validates_length_of :password, :in => 6..20, :on => create
+
+   def full_name
+      self.first_name + " " + self.last_name
+   end
+
+
+
 end

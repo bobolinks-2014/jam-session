@@ -1,0 +1,14 @@
+<div class="public-container">
+  <div class="public-user-left-container">
+    <div class="text-center">
+      <%= image_tag('jett.jpg') %>
+    </div>
+
+    <%= text_area(:comment, :content, cols: 1, rows: 10, placeholder: "Leave a message...") %>
+  </div>
+
+  <div class="public-user-right-container">
+    <h1><%= @user.first_name.upcase %></h1>
+    <h1 class="subheader">Awesome</h1>
+  </div>
+</div>
