@@ -17,9 +17,30 @@
   <% @neighborhood.users.each do |user| %>
     <div class="mini-user-profile-container">
       <div class="profile-pic"><%=image_tag('user.img_url') %></div>
-      <div class="instruments-played"><%= user.instruments %></div>
+      <%= user_instruments.each do |user_inst|%>
+        <div class="instruments-played">
+          <% @user.user_instruments.each do |user_ins|  %>
+        <li>
+          <%= image_tag(user_ins.instrument.icon) %>
+          <%= user_ins.skill_level %>
+          <%= user_ins.genre_list.each do |genre| %>
+            <%= genre %>
+          <% end %>
+
+        </li><% @user.user_instruments.each do |user_ins|  %>
+        <li>
+          <%= image_tag(user_ins.instrument.icon) %>
+          <%= user_ins.skill_level %>
+          <%= user_ins.genre_list.each do |genre| %>
+            <%= genre %>
+          <% end %>
+
+        </li>
+        </div>
+
       <div class=""></div>  
     </div>
+      <% end %>
   <% end %>
 
 
