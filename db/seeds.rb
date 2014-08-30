@@ -63,11 +63,6 @@ Comment.create(content: 'Smoooth', rating: rand(1..5), commenter_id: rand(1..7),
 Comment.create(content: 'Legendary skills...psyche!', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
 
 
-# user_instruments
-
-10.times do
-  UserInstrument.create(user_id: rand(1..7), instrument_id: rand(1..5), skill_level: rand(1..5))
-end
 
 # tag-list
 
@@ -78,6 +73,11 @@ list.each do |tag|
 end
 
 
+# user_instruments
+
+10.times do
+  UserInstrument.create(user_id: rand(1..7), instrument_id: rand(1..5), skill_level: rand(1..5), genre_list: list.sample)
+end
 
 
 
