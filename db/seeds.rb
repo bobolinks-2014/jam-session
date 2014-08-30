@@ -5,6 +5,24 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# Instruments
+
+Instrument.create(name: "Vocals")
+Instrument.create(name: "Guitar")
+Instrument.create(name: "Saxophone")
+Instrument.create(name: "Drums")
+Instrument.create(name: "Cowbell")
+Instrument.create(name: "Clarinet")
+
+
+# Neighborhoods
+
+Neighborhood.create(name: 'Rogers Park')
+Neighborhood.create(name: 'Bucktown')
+Neighborhood.create(name: 'South Loop')
+Neighborhood.create(name: 'Lakeview')
+Neighborhood.create(name: 'Hyde Park')
+Neighborhood.create(name: 'River North')
 
 # Users
 
@@ -32,24 +50,6 @@ User.create(first_name: "Tina", last_name: "Turner", email: "simplytheest@tina.o
 User.create(first_name: "Joan", last_name: "Jett", email: "joan@runaways.org", password: "testing", password_confirmation: "testing", img_url: 'jett.jpg', neighborhood_id: 1)
 
 
-# Instruments
-
-Instrument.create(name: "Vocals")
-Instrument.create(name: "Guitar")
-Instrument.create(name: "Saxophone")
-Instrument.create(name: "Drums")
-Instrument.create(name: "Cowbell")
-Instrument.create(name: "Clarinet")
-
-
-# Neighborhoods
-
-Neighborhood.create(name: 'Rogers Park')
-Neighborhood.create(name: 'Bucktown')
-Neighborhood.create(name: 'South Loop')
-Neighborhood.create(name: 'Lakeview')
-Neighborhood.create(name: 'Hyde Park')
-Neighborhood.create(name: 'River North')
 
 # Comments
 
