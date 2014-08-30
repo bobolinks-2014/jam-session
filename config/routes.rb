@@ -16,7 +16,7 @@ JamSession::Application.routes.draw do
   #   resources :products
   resources :users
 
-  get '/:neighborhood' => 'neighborhoods#show'
+  get '/:neighborhood' => 'neighborhoods#show', :as => 'neighborhood'
   # get '/hyde-park' => 'neighborhoods#show'
   # get '/south-loop' => 'neighborhoods#show'
   # get '/lakeview' => 'neighborhoods#show'
