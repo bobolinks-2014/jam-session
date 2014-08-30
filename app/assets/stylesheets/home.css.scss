@@ -1,7 +1,46 @@
-p {
-	color: red;
+
+.home p {
+	color: #939393;
+	font-size: 22px;
+	text-align: center;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 30px;
 }
 
 .home {
-	margin-top: 70px;
+	background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);
+	height: 1900px;
+	background-color: #F5F5F5;
+}
+
+.home .head {
+	margin-top: 35px;
+	background-color: ghostwhite;
+	border-bottom: 10px solid #333366;
+	height: 400px;
+}
+
+.head img {
+	display: block;
+	margin: auto;
+	position: relative;
+	top: 60px;
+}
+
+.home .neighborhoods {
+	margin: auto;
+	width: 1200px;
+	height: 1200px;
+}
+
+.home h2 {
+	margin-top: 25px;
+	text-align: center;
+	font-weight: bold;
+	color: #545455;
 }
