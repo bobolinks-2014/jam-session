@@ -17,11 +17,13 @@
 
   <body>
   <header>
+    <nav>
     <div class="fixed">
     <nav class="top-bar">
       <div class="right">
         <ul>
         <% if logged_in? %>
+            <div class="small-2 columns signup">
             <div class="small-2 columns">
               <%= link_to "Profile", current_user %>
             </div>
@@ -30,17 +32,17 @@
             </div>
         <% else %>
             <%= form_for(:user, :url => {:controller => 'sessions', :action => 'login'}) do |f| %>
+              <div class="small-3 columns">
+                <%= link_to "Sign Up", new_user_path, :class => "signup" %>
+              </div>
               <div class="small-4 columns">
                 <%= f.email_field :email, :autofocus => true,:value => nil, placeholder: 'email' %>
               </div>
               <div class="small-4 columns">
                 <%= f.password_field :password, :autofocus => true, placeholder: 'password' %>
               </div>
-              <div class="small-2 columns">
+              <div class="small-1 columns">
                 <%= f.submit 'Sign In' %>
-              </div>
-              <div class="small-2 columns">
-                <%= button_to "Sign Up", new_user_path, :class => "signup" %>
               </div>
             <% end %>
         <% end %>
