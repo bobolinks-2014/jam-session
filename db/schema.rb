@@ -77,7 +77,6 @@ ActiveRecord::Schema.define(version: 20140830175802) do
     t.integer  "neighborhood_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "avatar"
     t.string   "image"
   end
 
