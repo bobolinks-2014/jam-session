@@ -25,12 +25,14 @@
       <div class="right">
         <ul>
         <% if logged_in? %>
-            <div class="small-2 columns signup">
-            <div class="small-2 columns">
-              <%= link_to "Profile", current_user %>
-            </div>
-            <div class="small-2 columns">
-              <%= link_to "Logout", logout_path %>
+            <div class="loggedin">
+              <div class="small-7 columns signup">
+              <div class="small-2 columns">
+                <%= link_to "Profile", current_user %>
+              </div>
+              <div class="small-2 columns">
+                <%= link_to "Logout", logout_path %>
+              </div>
             </div>
         <% else %>
             <%= form_for(:user, :url => {:controller => 'sessions', :action => 'login'}) do |f| %>

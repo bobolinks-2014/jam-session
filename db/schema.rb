@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20140830175802) do
   create_table "user_instruments", force: true do |t|
     t.integer  "user_id"
     t.integer  "instrument_id"
+    t.text     "tag_list"
     t.integer  "skill_level"
     t.datetime "created_at"
     t.datetime "updated_at"
