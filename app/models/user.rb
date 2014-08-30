@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
     has_many :comments, foreign_key: "commenter_id"
     has_many :feedback, class_name: "Comment", foreign_key: "receiver_id"
 
-    mount_uploader :image, ImageUploader
+    # mount_uploader :image, ImageUploader
 
     has_secure_password
 
