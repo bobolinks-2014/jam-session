@@ -4,7 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "JamSession" %></title>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation/foundation.js"></script>
+    <script src="js/foundation/foundation.orbit.js"></script>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -18,12 +22,16 @@
       <div class="right">
         <ul>
         <% if logged_in? %>
-            <li><%= button_to "Profile", current_user %></li>
-            <li><%= button_to "Logout", logout_path %></li>
+            <div class="small-2 columns">
+              <%= link_to "Profile", current_user %>
+            </div>
+            <div class="small-2 columns">
+              <%= link_to "Logout", logout_path %>
+            </div>
         <% else %>
             <%= form_for(:user, :url => {:controller => 'sessions', :action => 'login'}) do |f| %>
               <div class="small-4 columns">
-                <%= f.email_field :email, :autofocus => true, placeholder: 'email' %>
+                <%= f.email_field :email, :autofocus => true,:value => nil, placeholder: 'email' %>
               </div>
               <div class="small-4 columns">
                 <%= f.password_field :password, :autofocus => true, placeholder: 'password' %>
