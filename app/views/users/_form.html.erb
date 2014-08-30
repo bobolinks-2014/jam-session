@@ -1,5 +1,15 @@
 <%= form_for @user, :html => {:multipart => true} do |f| %>
-  
+  <% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited
+      this user from being saved:</h2>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+    <% end %>
+
   <div class="signup_form">
     <h3>Sign up!</h3>
   <div class="signup_field1">
@@ -20,13 +30,21 @@
   
   <h4>Now for the fun profile info:</h4>
   
-  <p>
+  <div class="image">
     <%= f.file_field :image %>
-  </p>
-  <p>
-    <%= f.label :remote_image_url, "or image URL" %><br>
-    <%= f.text_field :remote_image_url %>
-  </p>
+  </div>
+  <div class="image_field">
+    <%= f.label :remote_image_url, "or image URL"%><br>
+    <%= f.text_field :remote_image_url, placeholder: "or image URL" %>
+  </div>
+  <div class="signup_description">
+    <%= f.text_area :description, :autofocus => true, placeholder: 'Tell us a little about yourself .' %>
+  </div>
+
+  <div class="neighborhood_dropdown">
+    <%= f.collection_select(:neighborhood_id, @neighborhoods, :id, :name, :include_blank => "Please select a neighborhood") %>
+
+  </div>
   <div class="signup_button">
     <%= f.submit "Push it real good!" %>
   </div>
