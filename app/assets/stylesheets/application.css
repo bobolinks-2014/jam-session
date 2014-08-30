@@ -10,16 +10,33 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *= require_home
+<<<<<<< Updated upstream
  *= require_tree .
  *= require_self
+=======
+ *= require_neighborhood
+ *= require_users
+
+Foundation Cheat Sheet: https://princessdesign.net/foundation-cheat-sheet/#;
+>>>>>>> Stashed changes
  */
+
 /* color scheme :
 purple - 333366
 light grey - CCCCCC*/
 
+/*require foundation_and_overrides
+require_home*/
+
 body {
   font-family: candara, sans-serif;
+<<<<<<< Updated upstream
   margin-top: 70px;
+=======
+  background-color: #DBDBDB;
+  margin-top: 990px;
+
+>>>>>>> Stashed changes
 }
 
 nav {
@@ -28,6 +45,7 @@ nav {
   height: 70px;
   width: 100%;
   background-color: #333366;
+<<<<<<< Updated upstream
 }
 
 ul .form {
@@ -77,5 +95,48 @@ ul .nav-bar{
   margin-right: 40px;
   float: right;
 }
+=======
+    -webkit-box-shadow: 0px 0px 4px 2px #000000;
+       -moz-box-shadow: 0px 0px 4px 2px #000000;
+            box-shadow: 0px 0px 4px 2px #000000;
+  height: 62px;
+}
+
+.top-bar form {
+	position: relative;
+	top: 9px;
+	margin-right: 80px;
+}
+
+.top-bar form input[type="email"] {
+	padding: 16px 27px 16px 7px;
+}
+
+.top-bar form input[type="password"] {
+	padding: 16px 27px 16px 7px;
+}
+
+.top-bar input[name="commit"] {
+	padding: 8px;
+  background-color: #dcdcdc;
+  border: 1px solid #666;
+  border-radius: 3px;
+  color:#000;
+  padding-bottom: 10px;
+  text-decoration:none;
+}
+
+.top-bar .signup {
+	position: relative;
+	top: 2px;
+	color: ghostwhite;
+	left: 20px;
+	font-size: 25px;
+}
+
+/*.top-bar form input[type="submit"] {
+	padding: 12px 26px 18px 10px
+}*/
+>>>>>>> Stashed changes
 
 
