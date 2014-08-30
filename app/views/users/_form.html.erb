@@ -1,4 +1,4 @@
-<%= form_for(@user) do |f| %>
+<%= form_for @user, :html => {:multipart => true} do |f| %>
   
   <div class="signup_form">
     <h3>Sign up!</h3>
@@ -19,8 +19,14 @@
   </div>
   
   <h4>Now for the fun profile info:</h4>
-
-
+  
+  <p>
+    <%= f.file_field :image %>
+  </p>
+  <p>
+    <%= f.label :remote_image_url, "or image URL" %><br>
+    <%= f.text_field :remote_image_url %>
+  </p>
   <div class="signup_button">
     <%= f.submit "Push it real good!" %>
   </div>
