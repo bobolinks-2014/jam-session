@@ -1,3 +1,28 @@
 // Place all the styles related to the Neighborhood controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.neighborhood_container {
+  margin-top: 40px;
+  position: center;
+  height: 700px;
+  padding: 40px;
+  width: 100%;
+  background-color: ghostwhite;
+  border-radius: 2px;
+}
+
+.main-title {
+  position: center;
+}
+
+.small-block-grid {
+   margin-top: 20px;
+}
+
+.small-block-grid li{
+  display: inline-block;
+  
+
+}

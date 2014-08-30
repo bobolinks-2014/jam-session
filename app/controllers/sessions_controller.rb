@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       p "session has been set"
     end
-    redirect_to root_path
+    redirect_to neighborhood_path(@user.neighborhood)
   end
 
   def logout
