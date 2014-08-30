@@ -38,7 +38,7 @@
   }
 
 .signup_form{
-	margin-top: 170px;
+	margin-top: 130px;
   margin-left: 400px;
   margin-right: 400px;
 	border: 2px solid black;
@@ -53,11 +53,15 @@
 }
 .signup_field1{
   margin-top:15px;
-  margin-bottom: -10px;
   padding-right: 30px;
   padding-left: 30px;
+  padding-bottom:-20px;
 }
 h3{
+  text-align:center;
+  color: white;
+}
+h4{
   text-align:center;
   color: white;
 }
@@ -65,4 +69,17 @@ h3{
   text-align: center;
   padding-bottom: 30px;
   padding-top: 15px;
+}
+.signup_field2{
+  border-radius: 30px;
+  margin-bottom: -20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-top:-20px;
+}
+.signup_field3{
+  margin-top: -18px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-bottom: -20px;
 }
