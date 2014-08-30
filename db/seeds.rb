@@ -6,10 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# Users
-
-
-
 # Instruments
 
 Instrument.create(name: "Vocals", icon: 'microphone-icon.png')
@@ -17,8 +13,6 @@ Instrument.create(name: "Guitar", icon: 'guitar-icon.png')
 Instrument.create(name: "Saxophone", icon: 'sax-icon.png')
 Instrument.create(name: "Drums", icon: 'drum-icon.png')
 Instrument.create(name: "Cowbell", icon: 'cowbell-icon.png')
-# Instrument.create(name: "Clarinet")
-
 
 # Neighborhoods
 
@@ -51,6 +45,8 @@ User.create(first_name: "Kenny", last_name: "G", email: "thebest@clarinet.org", 
 User.create(first_name: "Tina", last_name: "Turner", email: "simplytheest@tina.org", password: "testing", password_confirmation: "testing", img_url: 'turner.jpg', description: 'Whats love got to do, got to do with it?', neighborhood_id: 1)
 
 User.create(first_name: "Joan", last_name: "Jett", email: "joan@runaways.org", password: "testing", password_confirmation: "testing", img_url: 'jett.jpg', neighborhood_id: 1)
+
+
 # Comments
 
 Comment.create(content: 'This guy was so great to play with.  Musical Genius', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
