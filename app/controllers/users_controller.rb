@@ -14,9 +14,11 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      @neighborhood = @user.neighborhood
-      redirect_to neighborhood_path(@neighborhood)
+      @neighborhood = @user.neighborhood.name.downcase.gsub(/\s/,"-")
+      redirect_to "/#{@neighborhood}"
     else
+      @neighborhoods = Neighborhood.all
+      p "i have no fricking clue"
       render 'new'
     end
   end
@@ -40,6 +42,6 @@ class UsersController < ApplicationController
 private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :tag_list, :neighborhood_id, :remote_image_url, :description, )
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :tag_list, :neighborhood_id, :remote_image_url , :description, :image)
   end
 end
