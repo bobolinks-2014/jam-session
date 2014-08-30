@@ -6,24 +6,34 @@
     <ul class="small-block-grid-5">
       <li><%= image_tag('guitar.png') %></li>
       <li><%= image_tag('microphone.png') %></li>
-      <li><%= image_tag('sax.png') %></li>
       <li><%= image_tag('drum.png') %></li>
       <li><%= image_tag('cowbell.png') %></li>
+      <li><%= image_tag('sax.png') %></li>
     </ul>
   </div>
 
 </div>
+
 <div class="list-container">
   <% @neighborhood.users.each do |user| %>
-    <div class="mini-user-profile-container">
-      <div class="profile-pic"><%=image_tag('user.img_url') %></div>
-      <div class="instruments-played"><%= user.instruments %></div>
-      <div class=""></div>  
-    </div>
+  <div class="profile-row">
+        <div class="profile-pic"><li><%=image_tag(user.img_url) %></li></div>
+        <div class="name"><li><%= user.first_name %> <%= user.last_name %></li></div>
+     
+          <% user.user_instruments.each do |user_ins|  %>
+        
+         <div class="instrument"><li><%= image_tag(user_ins.instrument.icon) %></li>
+         <li><%= user_ins.skill_level %></li>
+        </div>
+         <% user_ins.genre_list.each do |genre| %>
+          <li><%= genre %></li>
+          <% end %>
+        <% end %>
+  </div>
   <% end %>
+</div>   
 
 
-</div>
 
 
 
