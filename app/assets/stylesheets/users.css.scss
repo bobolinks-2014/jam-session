@@ -1,5 +1,5 @@
 .user-show-container {
-  margin-top: 55px;
+  margin-top: 60px;
   width: 100%;
   height: 100%;
   min-width: 1200px;
@@ -38,8 +38,10 @@
 .description {
   position: relative;
   float:left;
-  color: #A8A8A8;
+  color: #CCCCCC;
 }
+
+/*******************/
 
 .user-top-right-container{
   position: relative;
@@ -65,7 +67,7 @@
   float:left;
   margin: 0px 10px 10px 10px;
   width: 99%;
-  height: 70%;
+  height: 800px;
   background-color: ghostwhite;
   border-radius: 6px;
     -webkit-box-shadow: 0px 0px 4px 2px #BABABA;
@@ -84,12 +86,129 @@
             box-shadow: 0px 0px 4px 2px #D4D4D4;
 }
 
+.user-bottom-container a{
+  float:right;
+  margin: 0px 50px;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.musical-info {
+  width: 90%;
+}
+
+.instrument-logo {
+  position: relative;
+  float:left;
+  width: 50px;
+}
+
+.instrument-logo img{
+  margin-top: 10px;
+}
+
+.skill-info {
+  position:relative;
+  float:left;
+  margin: 10px;
+  padding-left: 20px;
+}
+
+.skill-info h3 {
+  text-align: center;
+}
+
+h4.subheader{
+  text-align: center;
+}
+
+.genre-info{
+  position:relative;
+  float:left;
+  margin: 10px;
+}
+
+.user-seshes {
+  padding: 20px;
+}
+
+.sesh-info {
+  position:relative;
+  float:left;
+  margin:10px;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  border: 1px dotted grey;
+  border-radius: 6px;
+}
+
+.favorite-partners{
+  position:relative;
+  float:left;
+  clear:left;
+  margin:10px;
+  padding:10px;
+  width: 100%;
+}
+
+.partner{
+  position: relative;
+  float:left;
+  width: 250px;
+  margin: 5px;
+  padding:10px;
+}
+
+.favorite-partners h5{
+  text-align: center;
+}
+
+.profile-pic-sesh a {
+  margin: auto;
+  text-align: center;
+}
+
+.profile-pic-sesh img {
+  width: 80%;
+  border-radius: 10px;
+  padding: 5px;
+  border: 2px solid #CCCCCC;
+  background-color: ghostwhite;
+}
+
+.sesh-info h5{
+  text-align: center;
+}
+
+.sesh-info p{
+  font-size:85%;
+  text-align: center;
+}
+
+.sesh-partners{
+  padding-top: 10px;
+  border-top: 2px double #DBDBDB;
+}
+
+.sesh-partners li{
+  list-style: none;
+  text-align: center
+}
+
+.feedback a{
+  position:absolute;
+  bottom: 2px;
+  font-size: 90%;
+}
+
+/*******************/
 
 .signup_form{
-	margin-top: 130px;
+  margin-top: 130px;
   margin-left: 400px;
   margin-right: 400px;
-	border: 2px solid black;
+  border: 2px solid black;
   border-radius: 20px;
   background-color: #333366;
 }
@@ -132,11 +251,5 @@
   margin-bottom: -20px;
 }
 
-.user-bottom-container a{
-  float:right;
-  margin: 0px 50px;
-  padding: 8px;
-  border-radius: 6px;
 
-}
 
