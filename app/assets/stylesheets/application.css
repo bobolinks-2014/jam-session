@@ -74,6 +74,12 @@ body {
 	padding-right: 0px;
 }
 
+.loggedin {
+	position: relative;
+	top: 8px;
+	right: 30px;
+}
+
 /*.wnote {
 	position: absolute;
 	top: 0px;

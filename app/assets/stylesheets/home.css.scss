@@ -5,8 +5,12 @@
 	text-align: center;
 }
 
+.row img {
+	padding: 6px;
+}
+
 .row {
-	display: flex;
+/*	display: flex;*/
 	flex-wrap: wrap;
 	justify-content: center;
 	margin-top: 30px;
@@ -29,7 +33,7 @@
 	display: block;
 	margin: auto;
 	position: relative;
-	top: 60px;
+	top: 70px;
 }
 
 .home .neighborhoods {
