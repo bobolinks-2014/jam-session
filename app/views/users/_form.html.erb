@@ -1,51 +1,16 @@
-<%= form_for @user, :html => {:multipart => true} do |f| %>
-  <% if @user.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@user.errors.count, "error") %> prohibited
-      this user from being saved:</h2>
-    <ul>
-    <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-    <% end %>
+ <%= form_for @user, :html => {:multipart => true} do |f| %>
 
-  <div class="signup_form">
-    <h3>Sign up!</h3>
-  <div class="signup_field1">
-    <%= f.text_field :first_name, :autofocus => true, placeholder: 'First Name'%>
-  </div>
-   <div class="signup_field3">
-    <%= f.text_field :last_name, :autofocus => true, placeholder: 'Last Name'%>
-  </div>
-  <div class="signup_field">
-    <%= f.email_field :email, :autofocus => true, placeholder: 'Email'%>
-  </div>
-  <div class="signup_field2">
-    <%= f.password_field :password, :autofocus => true, placeholder: 'Password'%>
-  </div>
-  <div class="signup_field">
-    <%= f.password_field :password_confirmation, :autofocus => true, placeholder: 'Password Confirmation'%>
-  </div>
-  
-  <h4>Now for the fun profile info:</h4>
-  
-  <div class="image">
+    <%= f.text_field :first_name, :autofocus => true, placeholder: 'First Name', class: 'field' %>
+    <%= f.text_field :last_name, placeholder: 'Last Name', class: 'field'%>
+    <%= f.email_field :email, placeholder: 'Email', class: 'field'%>
+    <%= f.password_field :password, placeholder: 'Password', class: 'field'%>
+    <%= f.password_field :password_confirmation, placeholder: 'Re-enter Password', class: 'field'%>
+
+    <h4>Profile Info:</h4>
+
     <%= f.file_field :image %>
-  </div>
-  <!-- <div class="image_field">
-    <%= f.label :remote_image_url, "or image URL"%><br>
-    <%= f.text_field :remote_image_url, placeholder: "or image URL" %>
-  </div> -->
-  <div class="signup_description">
-    <%= f.text_area :description, :autofocus => true, placeholder: 'Tell us a little about yourself .' %>
-  </div>
-
-  <div class="neighborhood_dropdown">
+    <%= f.text_area :description, placeholder: 'Tell us a little about yourself...' %>
     <%= f.collection_select(:neighborhood_id, @neighborhoods, :id, :name, :include_blank => "Please select a neighborhood") %>
+    <%= f.submit "Submit" %>
 
-  </div>
-  <div class="signup_button">
-    <%= f.submit "Push it real good!" %>
-  </div>
 <% end %>
