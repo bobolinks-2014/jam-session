@@ -202,75 +202,97 @@ h4.subheader{
   font-size: 90%;
 }
 
-/*******************/
+/********* Signup & Edit CSS **********/
 
-.signup_form{
-  margin-top: 130px;
-  margin-left: 400px;
-  margin-right: 400px;
-  border: 2px solid black;
-  border-radius: 20px;
+.signup_container {
+  position: relative;
+  padding: 30px 80px 30px 80px;
+  top: 100px;
   background-color: #333366;
-}
-.signup_field{
-  border-radius: 30px;
-  margin-bottom: -10px;
-  padding-right: 30px;
-  padding-left: 30px;
-}
-.signup_field1{
-  margin-top:15px;
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-bottom:-20px;
-}
-.signup_container h3{
-  text-align:center;
-  color: white;
-}
-.signup_container h4{
-  text-align:center;
-  color: white;
-}
-.signup_button{
-  text-align: center;
-  padding-bottom: 30px;
-  padding-top: 15px;
-}
-.signup_field2{
-  border-radius: 30px;
-  margin-bottom: -20px;
-  padding-right: 30px;
-  padding-left: 30px;
-  margin-top:-20px;
-}
-.signup_field3{
-  margin-top: -18px;
-  padding-right: 30px;
-  padding-left: 30px;
-  margin-bottom: -20px;
+  width: 550px;
+  margin: auto;
+  border: 5px solid black;
+  border-radius: 3px;
 }
 
-.image{
+.signup_container h3 {
   text-align: center;
-  color: white;
-  margin-left: 50px;
+  color: ghostwhite;
+}
+
+.signup_container h4 {
+  padding-top: 12px;
+  padding-bottom: 15px;
+  color: ghostwhite;
+  font-size: 25px;
+}
+
+.signup_container #user_first_name {
   margin-top: 30px;
 }
-.image_field{
-  padding-right: 30px;
-  padding-left: 30px;
-  text-align: center;
-  margin-top: -15px;
+
+#signup_head {
+  font-size: 35px;
 }
-.signup_description{
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-bottom: 20px;
-  margin-bottom: 15px;
+
+.signup_container 
+.field {
+  padding: 24px 0px 24px 13px;
+  border-radius: 5px;
+  font-size: 20px;
 }
-.neighborhood_dropdown{
-  width: 250px;
-  margin-left: 17%;
-  margin-bottom: 40px;
+
+.signup_container input[type="file"] {
+  color: red;
+  font-size: 15px;
 }
+
+#user_description {
+  border-radius: 5px;
+  height: 100px;
+  width: 400px;
+}
+
+#user_neighborhood_id {
+  margin-top: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
