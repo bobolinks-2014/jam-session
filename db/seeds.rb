@@ -25,7 +25,7 @@ lakeview = Neighborhood.create(name: 'Lakeview')
 hyde = Neighborhood.create(name: 'Hyde Park')
 river = Neighborhood.create(name: 'River North')
 
-christopher = User.create(first_name: "Christopher", last_name: "Walken", email: "needmore@cowbell.org", password: "testing", password_confirmation: "testing", iimage: File.open(File.join(Rails.root, 'app/assets/images/walken.jpg')), description: 'I got a fevah, and the only prescription...is more cowbell', neighborhood: bucktown)
+christopher = User.create(first_name: "Christopher", last_name: "Walken", email: "needmore@cowbell.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/walken.jpg')), description: 'I got a fevah, and the only prescription...is more cowbell', neighborhood: bucktown)
 
 axel = User.create(first_name: "Axel", last_name: "Rose", email: "sweetchild@omine.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/axl_rose.jpeg')), description: 'Nanananananannana neeee neeeee', neighborhood: bucktown)
 
