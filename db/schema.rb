@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140830175802) do
+ActiveRecord::Schema.define(version: 20140830202949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(version: 20140830175802) do
   create_table "instruments", force: true do |t|
     t.string   "name"
     t.string   "icon"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "jam_seshes", force: true do |t|
+    t.string   "name"
+    t.date     "sesh_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", force: true do |t|
+    t.string   "content"
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -67,6 +82,13 @@ ActiveRecord::Schema.define(version: 20140830175802) do
     t.datetime "updated_at"
   end
 
+  create_table "user_jam_seshes", force: true do |t|
+    t.integer  "jam_sesh_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -77,7 +99,6 @@ ActiveRecord::Schema.define(version: 20140830175802) do
     t.integer  "neighborhood_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "avatar"
     t.string   "image"
   end
 
