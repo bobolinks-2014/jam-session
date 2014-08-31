@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title><%= content_for?(:title) ? yield(:title) : "JamSession" %></title>
-    
+
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation/foundation.js"></script>
     <script src="js/foundation/foundation.orbit.js"></script>
-   
+
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
@@ -23,6 +23,11 @@
     <nav>
     <div class="fixed">
     <nav class="top-bar">
+      <div class="left">
+        <%= link_to root_path do %>
+          <%= image_tag("wbutton.png") %>
+        <% end %>
+      </div>
       <div class="right">
         <ul>
         <% if logged_in? %>

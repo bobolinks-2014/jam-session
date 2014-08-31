@@ -35,7 +35,7 @@ rivers = User.create(first_name: "Rivers", last_name: "Cuomo", email: "rivers@we
 
 henry = User.create(first_name: "Henry", last_name: "Rollins", email: "henry@blackflag.org", password: "testing", password_confirmation: "testing", img_url: 'rollins.jpg', description: 'Whats the matter man? Is the time not right?', neighborhood: river)
 
-kenny = User.create(first_name: "Kenny", last_name: "G", email: "kenny@kenny.org", password: "testing", password_confirmation: "testing", img_url: 'kenny_g_2.jpg', description: 'Awesome musician looking for other awesome musicians.', neighborhood: lakeview)
+kenny = User.create(first_name: "Kenny", last_name: "G", email: "kenny@kenny.org", password: "testing", password_confirmation: "testing", img_url: 'kenny_g.jpg', description: 'Awesome musician looking for other awesome musicians.', neighborhood: lakeview)
 
 tina = User.create(first_name: "Tina", last_name: "Turner", email: "simplytheest@tina.org", password: "testing", password_confirmation: "testing", img_url: 'turner.jpg', description: 'Whats love got to do, got to do with it?', neighborhood: south)
 
