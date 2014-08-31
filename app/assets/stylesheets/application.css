@@ -32,7 +32,7 @@ light grey - CCCCCC*/
 require_home*/
 
 body {
-  font-family: candara, sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   background-color: #DBDBDB;
   margin-top: 990px;
 }
