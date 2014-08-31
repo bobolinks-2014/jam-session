@@ -5,5 +5,9 @@ class NeighborhoodsController < ApplicationController
     @neighborhood = Neighborhood.find_by_name(slug)
     
   end
+
+  
+
+
 end
 

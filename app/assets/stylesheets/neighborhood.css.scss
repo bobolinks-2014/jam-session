@@ -16,7 +16,9 @@
   position: center;
 }
 
-.image-grid img {
+.small-block-grid-5 {
+ list-style: none;
+ display: inline;
  margin-top: 20px;
  border-bottom: 10px;
  border-bottom-color: #333366;
@@ -68,14 +70,15 @@
 }
 
 .instrument {
-  padding: 10px;
-  position: relative;
-  left: 25%;
-  bottom: 70%
+  padding: 20px;
+  /*position: relative;*/
+/*  left: 25%;
+  bottom: 70%*/
 }
 
 .skills {
-  padding: 20px;
+  padding: 10px;
+  position: relative;
  /* left: 25%;
   bottom: 70%*/
 }
@@ -84,9 +87,12 @@
   padding: 10px;
   font-size: 20px;
   font-style: bold;
+  position: relative;
 }
 
 .genres {
+  padding: 20px;
   font-size: 20px;
   font-style: bold;
+  position: relative;
 }

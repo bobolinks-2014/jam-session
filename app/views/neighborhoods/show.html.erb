@@ -4,16 +4,17 @@
 
   <div class="image-grid">
     <ul class="small-block-grid-5">
-      <li><%= image_tag('guitar.png') %></li>
-      <li><%= image_tag('microphone.png') %></li>
-      <li><%= image_tag('drum.png') %></li>
-      <li><%= image_tag('cowbell.png') %></li>
-      <li><%= image_tag('sax.png') %></li>
+      <li class="guitar"><%= image_tag('guitar.png') %></li>
+      <li class="microphone"><%= image_tag('microphone.png') %></li>
+      <li class="drum"><%= image_tag('drum.png') %></li>
+      <li class="cowbell"><%= image_tag('cowbell.png') %></li>
+      <li class="sax"><%= image_tag('sax.png') %></li>
     </ul>
   </div>
-
 </div>
 
+<!-- add a filters class with two dropdowns or two buttons that sort by skill level and genre -->
+  
   <div class="list-container">
     <% @neighborhood.users.each do |user| %>
     <%= link_to user_path(user) do %>
