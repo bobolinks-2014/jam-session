@@ -19,22 +19,22 @@
     <% @neighborhood.users.each do |user| %>
     <%= link_to user_path(user) do %>
     <div class="profile-row">
-          <div class="profile-pic"><li><%=image_tag(user.img_url) %></li></div>
+          <div class="profile-pic"><li><%=image_tag(user.image.url(:thumb).to_s) %></li></div>
           <div class="name"><li><%= user.first_name %> <%= user.last_name %></li></div>
-       
+
             <% user.user_instruments.each do |user_ins|  %>
-          
+
            <div class="instrument"><li><%= image_tag(user_ins.instrument.icon) %></li>
         <div class="skills"><li>Skill Level: <%= user_ins.skill_level %> </li>
           </div>
            <% user_ins.genre_list.each do |genre| %>
-            <li>Genre: <%= genre %></li></div> 
+            <li>Genre: <%= genre %></li></div>
             <% end %>
           <% end %>
     </div>
     <% end %>
     <% end %>
-  </div>   
+  </div>
 
 
 
