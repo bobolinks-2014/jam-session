@@ -1,129 +1,101 @@
-<% if current_user == @user %>
-  <div class="user-show-container">
+<div class="user-show-container">
 
-        <div class="user-top-left-container">
-          <div class="profile-pic">
-            <%= image_tag @user.image.url(:thumb).to_s %>
-          </div>
-          <div class="profile-info">
-            <h1><%= @user.full_name %></h1>
-            <h4 class="subheader"></h4>
+  <div class="user-top-left-container">
+    <div class="profile-pic">
+      <%= image_tag(@user.image.url(:thumb).to_s) %>
+    </div>
+    <div class="profile-info">
+      <h1><%= @user.full_name %></h1>
+      <h4 class="subheader"></h4>
 
-            <div class="description">
-              <p><%= @user.description %></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="user-top-right-container">
-          <ul class="musical-info medium-block-grid-1">
-            <li>
-            <% @user.user_instruments.each do |user_ins|  %>
-            <div class="instrument-logo">
-              <%= image_tag(user_ins.instrument.icon) %>
-            </div>
-            <div class="instrument-info">
-              <div class="skill-info">
-                <h5>Skill Level</h5>
-                <h4 class="subheader"><%= user_ins.skill_level %></h4>
-              </div>
-              <div class="genre-info">
-                <h5>Genres</h5>
-              <% user_ins.genre_list.each do |genre| %>
-                  <h4 class="subheader"><%= genre %></h4>
-              <% end %>
-              </div>
-            </div>
-            <% end %>
-            </li>
-          </ul>
-        </div>
-        <div class="user-bottom-container">
-
-          <div class="user-seshes">
-            <h2>Past Jam Sessions</h2>
-            <% @user.user_jam_seshes.each do |sesh| %>
-              <div class="sesh-info">
-                <h5 class="subheader"><%= sesh.jam_sesh.name %></h5>
-                <p class="subheader"><%= sesh.jam_sesh.format_date %></p>
-                <div class="sesh-partners">
-                  <% sesh.jam_sesh.get_users.each do |x| %>
-                    <% if x != @user %>
-                      <li class="subheader"><%= x.full_name %></li>
-                    <% end %>
-                  <% end %>
-                </div>
-                <div class="feedback">
-                  <%= link_to "Feedback" %>
-                </div>
-              </div>
-            <% end %>
-          </div>
-
-          <div class="favorite-partners">
-            <h2>Favorite Jam Sesh Partners</h2>
-            <% @jams.each do |user| %>
-              <div class="partner">
-                <h5 class="subheader"><%= user.full_name %></h5>
-                <div class="profile-pic-sesh">
-                  <%= link_to user_path(user) do %>
-                    <%= image_tag(user.img_url) %>
-                  <% end %>
-                </div>
-              </div>
-            <% end %>
-          </div>
-
-
-
-
-        </div>
-  </div>
-<% else %>
-  <div class="user-show-container">
-
-    <div class="user-top-left-container">
-      <div class="profile-pic">
-        <%= image_tag(@user.img_url) %>
-      </div>
-      <div class="profile-info">
-        <h1><%= @user.full_name %></h1>
-        <h4 class="subheader"></h4>
-        <div class="description">
-          <p><%= @user.description %></p>
-        </div>
+      <div class="description">
+        <p><%= @user.description %></p>
       </div>
     </div>
+  </div>
 
-
-    <div class="user-top-right-container">
-      <ul class="musical-info medium-block-grid-1">
-        <li>
-        <% @user.user_instruments.each do |user_ins|  %>
-        <div class="instrument-logo">
-          <%= image_tag(user_ins.instrument.icon) %>
+  <div class="user-top-right-container">
+    <ul class="musical-info medium-block-grid-1">
+      <li>
+      <% @user.user_instruments.each do |user_ins|  %>
+      <div class="instrument-logo">
+        <%= image_tag(user_ins.instrument.icon) %>
+      </div>
+      <div class="instrument-info">
+        <div class="skill-info">
+          <h5>Skill Level</h5>
+          <h4 class="subheader"><%= user_ins.skill_level %></h4>
         </div>
-        <div class="instrument-info">
-          <div class="skill-info">
-            <h5>Skill Level</h5>
-            <h4 class="subheader"><%= user_ins.skill_level %></h4>
-          </div>
-          <div class="genre-info">
-            <h5>Genres</h5>
-          <% user_ins.genre_list.each do |genre| %>
-              <h4 class="subheader"><%= genre %></h4>
-          <% end %>
-          </div>
-        </div>
+        <div class="genre-info">
+          <h5>Genres</h5>
+        <% user_ins.genre_list.each do |genre| %>
+            <h4 class="subheader"><%= genre %></h4>
         <% end %>
-        </li>
-      </ul>
-    </div>
-
-    <div class="user-bottom-container">
-      <textarea>Contact <%=@user.first_name %> to set up a jam session...</textarea>
-      <a href="" class = "button" >Send</a>
-    </div>
-
+        </div>
+      </div>
+      <% end %>
+      </li>
+    </ul>
   </div>
-<% end %>
+
+  <div class="user-bottom-container">
+
+    <% if current_user == @user %>
+
+      <div class="user-seshes">
+        <h2>Past Jam Seshes</h2>
+        <% @user.user_jam_seshes.each do |sesh| %>
+          <div class="sesh-info">
+            <h5 class="subheader"><%= sesh.jam_sesh.name %></h5>
+            <p class="subheader"><%= sesh.jam_sesh.format_date %></p>
+            <div class="sesh-partners">
+              <% sesh.jam_sesh.get_users.each do |x| %>
+                <% if x != @user %>
+                  <li class="subheader"><%= x.full_name %></li>
+                <% end %>
+              <% end %>
+            </div>
+
+          </div>
+        <% end %>
+      </div>
+
+      <div class="favorite-partners">
+        <h2>Favorite Jam Sesh Partners</h2>
+        <% @jams.each do |user| %>
+          <div class="partner">
+            <h5 class="subheader"><%= user.full_name %></h5>
+            <div class="profile-pic-sesh">
+              <%= link_to user_path(user) do %>
+                <%= image_tag(user.image.url(:thumb).to_s) %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="messages">
+        <h2>New Messages</h2>
+        <% @messages.each do |msg| %>
+          <div class="new-messages">
+            <p class="from">From: <%= msg.sender.full_name %></p>
+            <p class="msg"><%= msg.content %></p>
+            <%= link_to sesh_path do %>
+              <button class="button">Accept!</button>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+
+    <% else %>
+      <!-- PUBLIC profile page -->
+
+      <div class="user-bottom-container">
+        <textarea>Contact <%=@user.first_name %> to set up a jam session...</textarea>
+        <a href="" class = "button" >Send</a>
+      </div>
+
+    <% end %>
+  </div>
+
+</div>
