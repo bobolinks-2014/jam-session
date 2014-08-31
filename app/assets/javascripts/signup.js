@@ -4,7 +4,7 @@
 
 		var jqXHR = $.ajax({
 			type: "POST",
-			url: $(this).find("form").attr("action"),
+			url: $(this).attr("action"),
 			data: $(this).serialize(),
 			dataType: "html"
 		});

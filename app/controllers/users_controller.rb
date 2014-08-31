@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  respond_to :html
 
   def show
     @user = User.find(params[:id])
@@ -15,11 +16,14 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      @neighborhood = @user.neighborhood.name.downcase.gsub(/\s/,"-")
-      redirect_to "/#{@neighborhood}"
+      respond_to do |format|
+        format.html { render :_signup2 }
+      end
+      # @neighborhood = @user.neighborhood.name.downcase.gsub(/\s/,"-")
+      # redirect_to "/#{@neighborhood}"
     else
       @neighborhoods = Neighborhood.all
-      p "i have no fricking clue"
+      # p "i have no fricking clue"
       render 'new'
     end
   end
