@@ -5,6 +5,8 @@ RSpec.describe SessionsController, :type => :controller do
   before(:each) do
     hood = Neighborhood.create(name: "South Loop")
     @user = User.create!(first_name: "Bobo", last_name: "Link", email: "bobo@bobo.com", password: "testing", password_confirmation: "testing", neighborhood: hood)
+    @neighborhood = hood.name.downcase.gsub(/\s/,"-")
+
   end
 
   describe "#login" do
@@ -12,7 +14,7 @@ RSpec.describe SessionsController, :type => :controller do
       expect(session[:user_id]).to be_nil
       post :login, user: {:email => "bobo@bobo.com", :password => "testing"}
       expect(session[:user_id]).to eq(@user.id)
-      expect(response).to redirect_to(root_path)
+      expect(response).to redirect_to("/#{@neighborhood}")
     end
 
     it "should redirect the user to the root url if login is unsuccessful" do
