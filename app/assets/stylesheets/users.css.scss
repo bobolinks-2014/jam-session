@@ -10,7 +10,7 @@
   float:left;
   width: 70%;
   min-width: 850px;
-  height: 300px;
+  height: 320px;
   background-color: ghostwhite;
   margin: 10px;
   border-radius: 6px;
@@ -48,7 +48,7 @@
   float:right;
   width: 28%;
   min-width: 340px;
-  height: 300px;
+  height: 320px;
   background-color: ghostwhite;
   margin: 10px;
   border-radius: 6px;
@@ -67,7 +67,6 @@
   float:left;
   margin: 0px 10px 10px 10px;
   width: 99%;
-  height: 800px;
   background-color: ghostwhite;
   border-radius: 6px;
     -webkit-box-shadow: 0px 0px 4px 2px #BABABA;
@@ -132,11 +131,19 @@ h4.subheader{
   padding: 20px;
 }
 
+.user-seshes h2 {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.favorite-partners h2 {
+  font-family: 'Noto Sans', sans-serif;
+}
+
 .sesh-info {
   position:relative;
   float:left;
   margin:10px;
-  width: 200px;
+  width: 220px;
   height: 200px;
   padding: 10px;
   border: 1px dotted grey;
@@ -196,9 +203,50 @@ h4.subheader{
   text-align: center
 }
 
-.feedback a{
-  position:absolute;
-  bottom: 2px;
+.messages {
+  position:relative;
+  float:left;
+  clear:left;
+  width: 100%;
+  margin:20px;
+}
+
+.messages h2 {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.new-messages {
+  display:relative;
+  float:left;
+  width: 200px;
+  height: 240px;
+  margin: 10px;
+  padding:10px;
+  border: 1px dotted grey;
+  border-radius: 10px;
+}
+
+p.from {
+  border-bottom: 1px solid grey;
+  padding: 5px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.new-messages p {
+  text-align: center;
+  font-size: 90%;
+}
+
+.new-messages button {
+  display:block;
+  margin: 0px auto;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.new-messages h5 {
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
   font-size: 90%;
 }
 
@@ -235,7 +283,7 @@ h4.subheader{
   font-size: 35px;
 }
 
-.signup_container 
+.signup_container
 .field {
   padding: 24px 0px 24px 13px;
   border-radius: 5px;
