@@ -33,6 +33,9 @@
         <% if logged_in? %>
             <div class="loggedin">
               <div class="small-7 columns signup">
+              <div class="small-2 columns settings" >
+                <%= link_to "Settings", edit_user_path(current_user) %>
+              </div>
               <div class="small-2 columns">
                 <%= link_to "Profile", current_user %>
               </div>
