@@ -20,18 +20,17 @@ RSpec.describe UsersController, :type => :controller do
 
   describe "#create" do
     it "creates a new user if params are valid" do
-      expect {
-        post :create, user: {
-          first_name: "Christopher",
-          last_name: "Walken",
-          email: "needmore@cowbell.org",
-          password: "testing",
-          password_confirmation: "testing",
-          img_url: 'http://i.ytimg.com/vi/ZNT9E3yNaDU/maxresdefault.jpg',
-          description: 'I got a fevah, and the only prescription...is more cowbell',
-          neighborhood: hood
-        }
-      }.to change {User.count}.by(1)
+        # post :create, user: {
+        #   first_name: "Christopher",
+        #   last_name: "Walken",
+        #   email: "needmore@cowbell.org",
+        #   password: "testing",
+        #   password_confirmation: "testing",
+        #   img_url: 'http://i.ytimg.com/vi/ZNT9E3yNaDU/maxresdefault.jpg',
+        #   description: 'I got a fevah, and the only prescription...is more cowbell',
+        #   neighborhood: 'Lakeview'}
+        # user.save
+      expect{User.all}.to change(User, :count).by(1)
     end
   end
 
