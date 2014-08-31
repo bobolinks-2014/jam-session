@@ -23,10 +23,10 @@
           <% user.user_instruments.each do |user_ins|  %>
         
          <div class="instrument"><li><%= image_tag(user_ins.instrument.icon) %></li>
-         <li><%= user_ins.skill_level %></li>
+      <div class="skills"><li>Skill Level: <%= user_ins.skill_level %> </li>
         </div>
          <% user_ins.genre_list.each do |genre| %>
-          <li><%= genre %></li>
+          <li>Genre: <%= genre %></li></div> 
           <% end %>
         <% end %>
   </div>

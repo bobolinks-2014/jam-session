@@ -39,7 +39,7 @@
   float: left;
   margin: 15px;
   position: relative;
-  padding: 10px;
+  padding: 30px;
   border: solid 5px #333366;
   background-color: ghostwhite;
   border-radius: 10px;
@@ -49,25 +49,34 @@
   height: auto;
 }
 
+
 .profile-row li {
   position: relative;
+  display: inline-block;
+}
+
+.profile-row img {
+   position: relative;
   display: inline-block;
 }
 
 .name {
   font-size: 35px;
   position: relative;
-  left: 25%;
-  bottom: 85%
+/*  left: 25%;
+  bottom: 85%*/
 }
 
 .instrument {
+  padding: 10px;
   position: relative;
-  left: 25%;
-  bottom: 70%
+  padding: 20px;
+ /* left: 25%;
+  bottom: 70%*/
 }
 
 .skills {
+  padding: 10px;
   font-size: 20px;
   font-style: bold;
 }
