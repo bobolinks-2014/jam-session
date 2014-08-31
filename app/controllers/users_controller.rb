@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @comment = JamSesh.new
     @jams = @user.get_partners
+    @messages = @user.get_messages
   end
 
   def new
@@ -19,12 +20,10 @@ class UsersController < ApplicationController
       redirect_to "/#{@neighborhood}"
     else
       @neighborhoods = Neighborhood.all
-      p "i have no fricking clue"
       render 'new'
     end
   end
 
-  #edit
   def edit
     @user = User.find(params[:id])
   end

@@ -38,4 +38,8 @@ class User < ActiveRecord::Base
         return partners
     end
 
+    def get_messages
+        self.received_messages
+    end
+
 end
