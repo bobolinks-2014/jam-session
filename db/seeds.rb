@@ -33,7 +33,7 @@ walken = User.create(first_name: "Christopher",
             img_url: 'walken.jpg',
             description: 'I got a fevah, and the only prescription...is more cowbell',
             neighborhood: bucktown)
-<<<<<<< HEAD
+
 
 axel = User.create(first_name: "Axel", last_name: "Rose", email: "sweetchild@omine.org", password: "testing", password_confirmation: "testing", img_url: 'axl_rose.jpeg', description: 'Nanananananannana neeee neeeee', neighborhood: bucktown)
 
@@ -43,11 +43,10 @@ rivers = User.create(first_name: "Rivers", last_name: "Cuomo", email: "rivers@we
 
 henry = User.create(first_name: "Henry", last_name: "Rollins", email: "henry@blackflag.org", password: "testing", password_confirmation: "testing", img_url: 'rollins.jpg', description: 'Whats the matter man? Is the time not right?', neighborhood: river)
 
-kenny = User.create(first_name: "Kenny", last_name: "G", email: "kenny@kenny.org", password: "testing", password_confirmation: "testing", img_url: 'kenny_g_2.jpg', description: 'Awesome musician looking for other awesome musicians.', neighborhood: lakeview)
+kenny = User.create(first_name: "Kenny", last_name: "G", email: "kenny@kenny.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/kenny_g.jpg')), description: 'Awesome musician looking for other awesome musicians.', neighborhood: lakeview)
 
 tina = User.create(first_name: "Tina", last_name: "Turner", email: "simplytheest@tina.org", password: "testing", password_confirmation: "testing", img_url: 'turner.jpg', description: 'Whats love got to do, got to do with it?', neighborhood: south)
 
-=======
 
 axel = User.create(first_name: "Axel", last_name: "Rose", email: "sweetchild@omine.org", password: "testing", password_confirmation: "testing", img_url: 'axl_rose.jpeg', description: 'Nanananananannana neeee neeeee', neighborhood: bucktown)
 
@@ -57,7 +56,7 @@ rivers = User.create(first_name: "Rivers", last_name: "Cuomo", email: "rivers@we
 
 henry = User.create(first_name: "Henry", last_name: "Rollins", email: "henry@blackflag.org", password: "testing", password_confirmation: "testing", img_url: 'rollins.jpg', description: 'Whats the matter man? Is the time not right?', neighborhood: river)
 
-kenny = User.create(first_name: "Kenny", last_name: "G", email: "kenny@kenny.org", password: "testing", password_confirmation: "testing", img_url: 'kenny_g.jpg', description: 'Awesome musician looking for other awesome musicians.', neighborhood: lakeview)
+kenny = User.create(first_name: "Kenny", last_name: "G", email: "kenny@kenny.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/kenny_g.jpg')), description: 'Awesome musician looking for other awesome musicians.', neighborhood: lakeview)
 
 tina = User.create(first_name: "Tina", last_name: "Turner", email: "simplytheest@tina.org", password: "testing", password_confirmation: "testing", img_url: 'turner.jpg', description: 'Whats love got to do, got to do with it?', neighborhood: south)
 
@@ -91,7 +90,7 @@ User.create(first_name: "Lorde", last_name: " ", email: "lorde@royals.org", pass
  #Frank Sinatra
  #Skrillex
 
->>>>>>> add5a098699c3d90ed94c051da01658f1f488f54
+
 joan = User.create(first_name: "Joan", last_name: "Jett", email: "joan@runaways.org", password: "testing", password_confirmation: "testing", img_url: 'jett.jpg', neighborhood: rogers)
 
 
@@ -123,7 +122,7 @@ end
 
 # user_instruments
 
-<<<<<<< HEAD
+
 UserInstrument.create(user: walken, instrument: cowbell, skill_level: rand(1..5), genre_list: 'punk')
 UserInstrument.create(user: axel, instrument: guitar, skill_level: rand(1..5), genre_list: 'metal')
 UserInstrument.create(user: freddy, instrument: vocals, skill_level: rand(1..5), genre_list: 'metal')
@@ -165,14 +164,12 @@ UserJamSesh.create(jam_sesh: jazz, user: tina)
 UserJamSesh.create(jam_sesh: jazz, user: kenny)
 UserJamSesh.create(jam_sesh: scoot, user: kenny)
 UserJamSesh.create(jam_sesh: scoot, user: joan)
-=======
+
 
 25.times do
   UserInstrument.create(user_id: rand(1..20), instrument_id: rand(1..5), skill_level: rand(1..5), genre_list: list.sample)
 end
 
-
->>>>>>> add5a098699c3d90ed94c051da01658f1f488f54
 
 UserInstrument.create(user: walken, instrument: cowbell, skill_level: rand(1..5), genre_list: 'punk')
 UserInstrument.create(user: axel, instrument: guitar, skill_level: rand(1..5), genre_list: 'metal')
