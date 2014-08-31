@@ -12,7 +12,6 @@ class User < ActiveRecord::Base
     has_many :user_jam_seshes
     has_many :jam_seshes, through: :user_jam_seshes
 
-
     mount_uploader :image, ImageUploader
 
     has_secure_password

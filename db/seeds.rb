@@ -33,6 +33,7 @@ walken = User.create(first_name: "Christopher",
             img_url: 'walken.jpg',
             description: 'I got a fevah, and the only prescription...is more cowbell',
             neighborhood: bucktown)
+<<<<<<< HEAD
 
 axel = User.create(first_name: "Axel", last_name: "Rose", email: "sweetchild@omine.org", password: "testing", password_confirmation: "testing", img_url: 'axl_rose.jpeg', description: 'Nanananananannana neeee neeeee', neighborhood: bucktown)
 
@@ -46,6 +47,51 @@ kenny = User.create(first_name: "Kenny", last_name: "G", email: "kenny@kenny.org
 
 tina = User.create(first_name: "Tina", last_name: "Turner", email: "simplytheest@tina.org", password: "testing", password_confirmation: "testing", img_url: 'turner.jpg', description: 'Whats love got to do, got to do with it?', neighborhood: south)
 
+=======
+
+axel = User.create(first_name: "Axel", last_name: "Rose", email: "sweetchild@omine.org", password: "testing", password_confirmation: "testing", img_url: 'axl_rose.jpeg', description: 'Nanananananannana neeee neeeee', neighborhood: bucktown)
+
+freddy = User.create(first_name: "Freddy", last_name: "Mercury", email: "moustache@queen.org", password: "testing", password_confirmation: "testing", img_url: 'mercury.png', description: 'People on the streets. Ba-da-dee-dop-dop', neighborhood: bucktown)
+
+rivers = User.create(first_name: "Rivers", last_name: "Cuomo", email: "rivers@weezer.org", password: "testing", password_confirmation: "testing", img_url: 'cuomo.jpg', description: 'Beverly Hills, thats where I want to be', neighborhood: hyde)
+
+henry = User.create(first_name: "Henry", last_name: "Rollins", email: "henry@blackflag.org", password: "testing", password_confirmation: "testing", img_url: 'rollins.jpg', description: 'Whats the matter man? Is the time not right?', neighborhood: river)
+
+kenny = User.create(first_name: "Kenny", last_name: "G", email: "kenny@kenny.org", password: "testing", password_confirmation: "testing", img_url: 'kenny_g.jpg', description: 'Awesome musician looking for other awesome musicians.', neighborhood: lakeview)
+
+tina = User.create(first_name: "Tina", last_name: "Turner", email: "simplytheest@tina.org", password: "testing", password_confirmation: "testing", img_url: 'turner.jpg', description: 'Whats love got to do, got to do with it?', neighborhood: south)
+
+
+User.create(first_name: "Beyonce", last_name: "Knowles", email: "ifulikeit@ringonit.org", password: "testing", password_confirmation: "testing", img_url: 'beyonce.jpg', description: 'You better put a ring on it.', neighborhood_id: 6)
+
+User.create(first_name: "Joan", last_name: "Jett", email: "joan@runaways.org", password: "testing", password_confirmation: "testing", img_url: 'jett.jpg, ', description: 'Put another dime in the jukebox, baby.', neighborhood_id: 6)
+
+User.create(first_name: "Adele", last_name: " ", email: "adele@iwin.org", password: "testing", password_confirmation: "testing", img_url: 'adele.jpg', description: 'We could have had it allllllllllllll.', neighborhood_id: 6)
+
+User.create(first_name: "Flea", last_name: " ", email: "joan@runaways.org", password: "testing", password_confirmation: "testing", img_url: 'flea.jpg', description: 'With the birds I share this lonely view.', neighborhood_id: 5)
+
+User.create(first_name: "Eric", last_name: "Clapton", email: "eric@dominoes.com", password: "testing", password_confirmation: "testing", img_url: 'clapton.jpg', description: 'You look wonderful tonight', neighborhood_id: 5)
+
+User.create(first_name: "Aretha", last_name: "Franklin", email: "thequeen@ofsoul.org", password: "testing", password_confirmation: "testing", img_url: 'aretha.jpg', description: 'Sock it to me. Sock it to me. Sock it to me. Sock it to me. Sock it to me. Sock it to me. Sock it to me.', neighborhood_id: 5)
+
+User.create(first_name: "Neil", last_name: "Peart", email: "npeart@rush.org", password: "testing", password_confirmation: "testing", img_url: 'neilpeart.jpg',description: 'Thats why the call me, they call me the workin man', neighborhood_id: 4)
+
+User.create(first_name: "Bono", last_name: " ", email: "bono@u2.org", password: "testing", password_confirmation: "testing", img_url: 'bono.jpg',description: 'I still havent found what Im looking for.', neighborhood_id: 4)
+
+User.create(first_name: "Idina", last_name: "Menzel", email: "idina@frozen.org", password: "testing", password_confirmation: "testing", img_url: 'idina.jpg',description: 'Let it goooooooooooooooooooooooooooooooooooooo', neighborhood_id: 4)
+
+User.create(first_name: "Dr.", last_name: "Dre", email: "dre@nwa.org", password: "testing", password_confirmation: "testing", img_url: 'dre.jpg',description: 'Keep their heads ringin', neighborhood_id: 3)
+
+User.create(first_name: "Duke", last_name: "Greene", email: "duke@dbc.com", password: "testing", password_confirmation: "testing", img_url: 'duke.jpg',description: 'That was my nickname in highschool', neighborhood_id: 1)
+
+User.create(first_name: "Wynton", last_name: "Marsalis", email: "winton@jazz.org", password: "testing", password_confirmation: "testing", img_url: 'wyntonmarsalis.jpg',description: 'Invest yourself in everything you do. Theres fun in being serious.', neighborhood_id: 2)
+
+User.create(first_name: "Lorde", last_name: " ", email: "lorde@royals.org", password: "testing", password_confirmation: "testing", img_url: 'lorde.jpg',description: 'We dont care, we arent caught up in your love affair.', neighborhood_id: 3)
+
+ #Frank Sinatra
+ #Skrillex
+
+>>>>>>> add5a098699c3d90ed94c051da01658f1f488f54
 joan = User.create(first_name: "Joan", last_name: "Jett", email: "joan@runaways.org", password: "testing", password_confirmation: "testing", img_url: 'jett.jpg', neighborhood: rogers)
 
 
@@ -76,6 +122,57 @@ end
 
 
 # user_instruments
+
+<<<<<<< HEAD
+UserInstrument.create(user: walken, instrument: cowbell, skill_level: rand(1..5), genre_list: 'punk')
+UserInstrument.create(user: axel, instrument: guitar, skill_level: rand(1..5), genre_list: 'metal')
+UserInstrument.create(user: freddy, instrument: vocals, skill_level: rand(1..5), genre_list: 'metal')
+UserInstrument.create(user: rivers, instrument: guitar, skill_level: rand(1..5), genre_list: 'country')
+UserInstrument.create(user: henry, instrument: drums, skill_level: rand(1..5), genre_list: 'blues')
+UserInstrument.create(user: kenny, instrument: sax, skill_level: rand(1..5), genre_list: 'jazz')
+UserInstrument.create(user: tina, instrument: vocals, skill_level: rand(1..5), genre_list: 'punk')
+UserInstrument.create(user: joan, instrument: guitar, skill_level: rand(1..5), genre_list: 'classical')
+UserInstrument.create(user: freddy, instrument: cowbell, skill_level: rand(1..5), genre_list: 'country')
+UserInstrument.create(user: axel, instrument: vocals, skill_level: rand(1..5), genre_list: 'jazz')
+
+#jam_seshes
+
+name = ["Rockin Out", "Jazz Sesh"]
+
+rock = JamSesh.create(name: "Rockin Out", sesh_date: (Date.today-rand(30)))
+jazz = JamSesh.create(name: "Jazz Sesh", sesh_date: (Date.today-rand(30)))
+scoot = JamSesh.create(name: "Boot Scootin Boogie", sesh_date: (Date.today-rand(30)))
+duet = JamSesh.create(name: "Sweet Duet", sesh_date: (Date.today-rand(30)))
+
+#messages
+
+Message.create(content: "Let's meetup at the Loft to have an awesome jam sesh", sender: walken, receiver: axel )
+Message.create(content: "Let's meetup at my loft to have an awesome jam sesh", sender: axel, receiver: freddy )
+Message.create(content: "Let's meetup at the Studio to have an awesome jam sesh", sender: freddy, receiver: rivers )
+Message.create(content: "Let's meetup at the Hall to have an awesome jam sesh", sender: rivers, receiver: henry )
+Message.create(content: "Let's meetup at that cool place to have an awesome jam sesh", sender: henry, receiver: kenny )
+Message.create(content: "Let's meetup at DBC to have an awesome jam sesh", sender: kenny, receiver: tina )
+Message.create(content: "Let's meetup to have an awesome jam sesh", sender: tina, receiver: joan )
+Message.create(content: "Let's meetup at the Stage to have an awesome jam sesh", sender: joan, receiver: walken )
+
+#user_jam_sesh
+
+UserJamSesh.create(jam_sesh: duet, user: kenny)
+UserJamSesh.create(jam_sesh: duet, user: walken)
+UserJamSesh.create(jam_sesh: rock, user: kenny)
+UserJamSesh.create(jam_sesh: rock, user: axel)
+UserJamSesh.create(jam_sesh: jazz, user: tina)
+UserJamSesh.create(jam_sesh: jazz, user: kenny)
+UserJamSesh.create(jam_sesh: scoot, user: kenny)
+UserJamSesh.create(jam_sesh: scoot, user: joan)
+=======
+
+25.times do
+  UserInstrument.create(user_id: rand(1..20), instrument_id: rand(1..5), skill_level: rand(1..5), genre_list: list.sample)
+end
+
+
+>>>>>>> add5a098699c3d90ed94c051da01658f1f488f54
 
 UserInstrument.create(user: walken, instrument: cowbell, skill_level: rand(1..5), genre_list: 'punk')
 UserInstrument.create(user: axel, instrument: guitar, skill_level: rand(1..5), genre_list: 'metal')
@@ -118,5 +215,6 @@ UserJamSesh.create(jam_sesh: jazz, user: tina)
 UserJamSesh.create(jam_sesh: jazz, user: kenny)
 UserJamSesh.create(jam_sesh: scoot, user: kenny)
 UserJamSesh.create(jam_sesh: scoot, user: joan)
+
 
 
