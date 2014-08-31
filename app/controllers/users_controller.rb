@@ -2,7 +2,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @comment = Comment.new
+    @comment = JamSesh.new
+    @jams = @user.get_partners
   end
 
   def new

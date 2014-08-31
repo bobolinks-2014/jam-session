@@ -6,43 +6,46 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+require 'date'
+
 # Instruments
 
-Instrument.create(name: "Vocals", icon: 'microphone-icon.png')
-Instrument.create(name: "Guitar", icon: 'guitar-icon.png')
-Instrument.create(name: "Saxophone", icon: 'sax-icon.png')
-Instrument.create(name: "Drums", icon: 'drum-icon.png')
-Instrument.create(name: "Cowbell", icon: 'cowbell-icon.png')
+vocals = Instrument.create(name: "Vocals", icon: 'microphone-icon.png')
+guitar = Instrument.create(name: "Guitar", icon: 'guitar-icon.png')
+sax = Instrument.create(name: "Saxophone", icon: 'sax-icon.png')
+drums = Instrument.create(name: "Drums", icon: 'drum-icon.png')
+cowbell = Instrument.create(name: "Cowbell", icon: 'cowbell-icon.png')
 
 # Neighborhoods
 
-Neighborhood.create(name: 'Rogers Park')
-Neighborhood.create(name: 'Bucktown')
-Neighborhood.create(name: 'South Loop')
-Neighborhood.create(name: 'Lakeview')
-Neighborhood.create(name: 'Hyde Park')
-Neighborhood.create(name: 'River North')
+rogers = Neighborhood.create(name: 'Rogers Park')
+bucktown = Neighborhood.create(name: 'Bucktown')
+south = Neighborhood.create(name: 'South Loop')
+lakeview = Neighborhood.create(name: 'Lakeview')
+hyde = Neighborhood.create(name: 'Hyde Park')
+river = Neighborhood.create(name: 'River North')
 
-User.create(first_name: "Christopher",
+walken = User.create(first_name: "Christopher",
             last_name: "Walken",
             email: "needmore@cowbell.org",
             password: "testing",
             password_confirmation: "testing",
             img_url: 'walken.jpg',
             description: 'I got a fevah, and the only prescription...is more cowbell',
-            neighborhood_id: 2)
+            neighborhood: bucktown)
 
-User.create(first_name: "Axel", last_name: "Rose", email: "sweetchild@omine.org", password: "testing", password_confirmation: "testing", img_url: 'axl_rose.jpeg', description: 'Nanananananannana neeee neeeee', neighborhood_id: 2)
+axel = User.create(first_name: "Axel", last_name: "Rose", email: "sweetchild@omine.org", password: "testing", password_confirmation: "testing", img_url: 'axl_rose.jpeg', description: 'Nanananananannana neeee neeeee', neighborhood: bucktown)
 
-User.create(first_name: "Freddy", last_name: "Mercury", email: "moustache@queen.org", password: "testing", password_confirmation: "testing", img_url: 'mercury.png', description: 'People on the streets. Ba-da-dee-dop-dop', neighborhood_id: 1)
+freddy = User.create(first_name: "Freddy", last_name: "Mercury", email: "moustache@queen.org", password: "testing", password_confirmation: "testing", img_url: 'mercury.png', description: 'People on the streets. Ba-da-dee-dop-dop', neighborhood: bucktown)
 
-User.create(first_name: "Rivers", last_name: "Cuomo", email: "rivers@weezer.org", password: "testing", password_confirmation: "testing", img_url: 'cuomo.jpg', description: 'Beverly Hills, thats where I want to be', neighborhood_id: 2)
+rivers = User.create(first_name: "Rivers", last_name: "Cuomo", email: "rivers@weezer.org", password: "testing", password_confirmation: "testing", img_url: 'cuomo.jpg', description: 'Beverly Hills, thats where I want to be', neighborhood: hyde)
 
-User.create(first_name: "Henry", last_name: "Rollins", email: "henry@blackflag.org", password: "testing", password_confirmation: "testing", img_url: 'rollins.jpg', description: 'Whats the matter man? Is the time not right?', neighborhood_id: 3)
+henry = User.create(first_name: "Henry", last_name: "Rollins", email: "henry@blackflag.org", password: "testing", password_confirmation: "testing", img_url: 'rollins.jpg', description: 'Whats the matter man? Is the time not right?', neighborhood: river)
 
-User.create(first_name: "Kenny", last_name: "G", email: "thebest@clarinet.org", password: "testing", password_confirmation: "testing", img_url: 'kenny_g_2.jpg', description: 'Awesome musician looking for other awesome musicians.', neighborhood_id: 4)
+kenny = User.create(first_name: "Kenny", last_name: "G", email: "kenny@kenny.org", password: "testing", password_confirmation: "testing", img_url: 'kenny_g.jpg', description: 'Awesome musician looking for other awesome musicians.', neighborhood: lakeview)
 
-User.create(first_name: "Tina", last_name: "Turner", email: "simplytheest@tina.org", password: "testing", password_confirmation: "testing", img_url: 'turner.jpg', description: 'Whats love got to do, got to do with it?', neighborhood_id: 1)
+tina = User.create(first_name: "Tina", last_name: "Turner", email: "simplytheest@tina.org", password: "testing", password_confirmation: "testing", img_url: 'turner.jpg', description: 'Whats love got to do, got to do with it?', neighborhood: south)
+
 
 User.create(first_name: "Beyonce", last_name: "Knowles", email: "ifulikeit@ringonit.org", password: "testing", password_confirmation: "testing", img_url: 'beyonce.jpg', description: 'You better put a ring on it.', neighborhood_id: 6)
 
@@ -73,7 +76,7 @@ User.create(first_name: "Lorde", last_name: " ", email: "lorde@royals.org", pass
  #Frank Sinatra
  #Skrillex
 
-
+joan = User.create(first_name: "Joan", last_name: "Jett", email: "joan@runaways.org", password: "testing", password_confirmation: "testing", img_url: 'jett.jpg', neighborhood: rogers)
 
 
 # Comments
@@ -104,10 +107,54 @@ end
 
 # user_instruments
 
+
 25.times do
   UserInstrument.create(user_id: rand(1..20), instrument_id: rand(1..5), skill_level: rand(1..5), genre_list: list.sample)
 end
 
+
+
+UserInstrument.create(user: walken, instrument: cowbell, skill_level: rand(1..5), genre_list: 'punk')
+UserInstrument.create(user: axel, instrument: guitar, skill_level: rand(1..5), genre_list: 'metal')
+UserInstrument.create(user: freddy, instrument: vocals, skill_level: rand(1..5), genre_list: 'metal')
+UserInstrument.create(user: rivers, instrument: guitar, skill_level: rand(1..5), genre_list: 'country')
+UserInstrument.create(user: henry, instrument: drums, skill_level: rand(1..5), genre_list: 'blues')
+UserInstrument.create(user: kenny, instrument: sax, skill_level: rand(1..5), genre_list: 'jazz')
+UserInstrument.create(user: tina, instrument: vocals, skill_level: rand(1..5), genre_list: 'punk')
+UserInstrument.create(user: joan, instrument: guitar, skill_level: rand(1..5), genre_list: 'classical')
+UserInstrument.create(user: freddy, instrument: cowbell, skill_level: rand(1..5), genre_list: 'country')
+UserInstrument.create(user: axel, instrument: vocals, skill_level: rand(1..5), genre_list: 'jazz')
+
+#jam_seshes
+
+name = ["Rockin Out", "Jazz Sesh"]
+
+rock = JamSesh.create(name: "Rockin Out", sesh_date: (Date.today-rand(30)))
+jazz = JamSesh.create(name: "Jazz Sesh", sesh_date: (Date.today-rand(30)))
+scoot = JamSesh.create(name: "Boot Scootin Boogie", sesh_date: (Date.today-rand(30)))
+duet = JamSesh.create(name: "Sweet Duet", sesh_date: (Date.today-rand(30)))
+
+#messages
+
+Message.create(content: "Let's meetup at the Loft to have an awesome jam sesh", sender: walken, receiver: axel )
+Message.create(content: "Let's meetup at my loft to have an awesome jam sesh", sender: axel, receiver: freddy )
+Message.create(content: "Let's meetup at the Studio to have an awesome jam sesh", sender: freddy, receiver: rivers )
+Message.create(content: "Let's meetup at the Hall to have an awesome jam sesh", sender: rivers, receiver: henry )
+Message.create(content: "Let's meetup at that cool place to have an awesome jam sesh", sender: henry, receiver: kenny )
+Message.create(content: "Let's meetup at DBC to have an awesome jam sesh", sender: kenny, receiver: tina )
+Message.create(content: "Let's meetup to have an awesome jam sesh", sender: tina, receiver: joan )
+Message.create(content: "Let's meetup at the Stage to have an awesome jam sesh", sender: joan, receiver: walken )
+
+#user_jam_sesh
+
+UserJamSesh.create(jam_sesh: duet, user: kenny)
+UserJamSesh.create(jam_sesh: duet, user: walken)
+UserJamSesh.create(jam_sesh: rock, user: kenny)
+UserJamSesh.create(jam_sesh: rock, user: axel)
+UserJamSesh.create(jam_sesh: jazz, user: tina)
+UserJamSesh.create(jam_sesh: jazz, user: kenny)
+UserJamSesh.create(jam_sesh: scoot, user: kenny)
+UserJamSesh.create(jam_sesh: scoot, user: joan)
 
 
 
