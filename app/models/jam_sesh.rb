@@ -8,7 +8,7 @@ class JamSesh < ActiveRecord::Base
   end
 
   def get_users
-    seshes = UserJamSesh.where(jam:self)
+    seshes = UserJamSesh.where(jam_sesh: self)
     seshes.map {|x| x.user }
   end
 
