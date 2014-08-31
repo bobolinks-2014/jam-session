@@ -1,12 +1,12 @@
 class SessionsController < ApplicationController
 
   def login
-    @user = User.find_by_email(params[:user][:email])
-    if @user && @user.authenticate(params[:user][:password])
-      session[:user_id] = @user.id
-      p "session has been set"
+    user = User.find_by_email(params[:user][:email])
+    if user && user.authenticate(params[:user][:password])
+      session[:user_id] = user.id
     end
-    redirect_to neighborhood_path(@user.neighborhood)
+
+    redirect_to "/#{user.neighborhood.name}"
   end
 
   def logout

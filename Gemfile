@@ -35,6 +35,8 @@ gem 'bcrypt', '~> 3.1.7'
 #Use Carrierwave to upload pictures
 gem 'rmagick', require: false
 gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 
 
 # Use unicorn as the app server
