@@ -3,7 +3,7 @@
 
         <div class="user-top-left-container">
           <div class="profile-pic">
-            <%= image_tag(@user.img_url) %>
+            <%= image_tag @user.image.url(:thumb).to_s %>
           </div>
           <div class="profile-info">
             <h1><%= @user.full_name %></h1>

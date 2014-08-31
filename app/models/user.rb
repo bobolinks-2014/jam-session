@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
     EMAIL_REGEX = /[a-zA-Z0-9.-]*@[a-zA-Z0-9]*.[a-zA-Z0-9.]{3,5}/
-    attr_accessor :image, :remote_image_url
+    attr_accessor :image
 
     belongs_to :neighborhood
     has_many :user_instruments
@@ -12,8 +12,7 @@ class User < ActiveRecord::Base
     has_many :user_jam_seshes
     has_many :jam_seshes, through: :user_jam_seshes
 
-
-    # mount_uploader :image, ImageUploader
+    mount_uploader :image, ImageUploader
 
     has_secure_password
 
