@@ -6,8 +6,5 @@ class NeighborhoodsController < ApplicationController
     
   end
 
-  
-
-
 end
 
