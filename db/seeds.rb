@@ -25,45 +25,45 @@ lakeview = Neighborhood.create(name: 'Lakeview')
 hyde = Neighborhood.create(name: 'Hyde Park')
 river = Neighborhood.create(name: 'River North')
 
-christopher = User.create(first_name: "Christopher", last_name: "Walken", email: "needmore@cowbell.org", password: "testing", password_confirmation: "testing", img_url: 'walken.jpg', description: 'I got a fevah, and the only prescription...is more cowbell', neighborhood: bucktown)
+christopher = User.create(first_name: "Christopher", last_name: "Walken", email: "needmore@cowbell.org", password: "testing", password_confirmation: "testing", iimage: File.open(File.join(Rails.root, 'app/assets/images/walken.jpg')), description: 'I got a fevah, and the only prescription...is more cowbell', neighborhood: bucktown)
 
-axel = User.create(first_name: "Axel", last_name: "Rose", email: "sweetchild@omine.org", password: "testing", password_confirmation: "testing", img_url: 'axl_rose.jpeg', description: 'Nanananananannana neeee neeeee', neighborhood: bucktown)
+axel = User.create(first_name: "Axel", last_name: "Rose", email: "sweetchild@omine.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/axl_rose.jpeg')), description: 'Nanananananannana neeee neeeee', neighborhood: bucktown)
 
-freddy = User.create(first_name: "Freddy", last_name: "Mercury", email: "moustache@queen.org", password: "testing", password_confirmation: "testing", img_url: 'mercury.png', description: 'People on the streets. Ba-da-dee-dop-dop', neighborhood: bucktown)
+freddy = User.create(first_name: "Freddy", last_name: "Mercury", email: "moustache@queen.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/mercury.png')), description: 'People on the streets. Ba-da-dee-dop-dop', neighborhood: bucktown)
 
-rivers = User.create(first_name: "Rivers", last_name: "Cuomo", email: "rivers@weezer.org", password: "testing", password_confirmation: "testing", img_url: 'cuomo.jpg', description: 'Beverly Hills, thats where I want to be', neighborhood: hyde)
+rivers = User.create(first_name: "Rivers", last_name: "Cuomo", email: "rivers@weezer.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/cuomo.jpg')), description: 'Beverly Hills, thats where I want to be', neighborhood: hyde)
 
-henry = User.create(first_name: "Henry", last_name: "Rollins", email: "henry@blackflag.org", password: "testing", password_confirmation: "testing", img_url: 'rollins.jpg', description: 'Whats the matter man? Is the time not right?', neighborhood: river)
+henry = User.create(first_name: "Henry", last_name: "Rollins", email: "henry@blackflag.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/rollins.jpg')), description: 'Whats the matter man? Is the time not right?', neighborhood: river)
 
 kenny = User.create(first_name: "Kenny", last_name: "G", email: "kenny@kenny.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/kenny_g.jpg')), description: 'Awesome musician looking for other awesome musicians.', neighborhood: lakeview)
 
-tina = User.create(first_name: "Tina", last_name: "Turner", email: "simplytheest@tina.org", password: "testing", password_confirmation: "testing", img_url: 'turner.jpg', description: 'Whats love got to do, got to do with it?', neighborhood: south)
+tina = User.create(first_name: "Tina", last_name: "Turner", email: "simplytheest@tina.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/turner.jpg')), description: 'Whats love got to do, got to do with it?', neighborhood: south)
 
-beyonce = User.create(first_name: "Beyonce", last_name: "Knowles", email: "ifulikeit@ringonit.org", password: "testing", password_confirmation: "testing", img_url: 'beyonce.jpg', description: 'You better put a ring on it.', neighborhood_id: 6)
+beyonce = User.create(first_name: "Beyonce", last_name: "Knowles", email: "ifulikeit@ringonit.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/beyonce.jpg')), description: 'You better put a ring on it.', neighborhood_id: 6)
 
-joan = User.create(first_name: "Joan", last_name: "Jett", email: "joan@runaways.org", password: "testing", password_confirmation: "testing", img_url: 'jett.jpg', description: 'Put another dime in the jukebox, baby.', neighborhood_id: 6)
+joan = User.create(first_name: "Joan", last_name: "Jett", email: "joan@runaways.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/jett.jpg')), description: 'Put another dime in the jukebox, baby.', neighborhood_id: 6)
 
-adele = User.create(first_name: "Adele", last_name: " ", email: "adele@iwin.org", password: "testing", password_confirmation: "testing", img_url: 'adele.jpg', description: 'We could have had it allllllllllllll.', neighborhood_id: 6)
+adele = User.create(first_name: "Adele", last_name: " ", email: "adele@iwin.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/adele.jpg')), description: 'We could have had it allllllllllllll.', neighborhood_id: 6)
 
-flea = User.create(first_name: "Flea", last_name: " ", email: "joan@runaways.org", password: "testing", password_confirmation: "testing", img_url: 'flea.jpg', description: 'With the birds I share this lonely view.', neighborhood_id: 5)
+flea = User.create(first_name: "Flea", last_name: " ", email: "joan@runaways.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/flea.jpg')), description: 'With the birds I share this lonely view.', neighborhood_id: 5)
 
-eric = User.create(first_name: "Eric", last_name: "Clapton", email: "eric@dominoes.com", password: "testing", password_confirmation: "testing", img_url: 'clapton.jpg', description: 'You look wonderful tonight', neighborhood_id: 5)
+eric = User.create(first_name: "Eric", last_name: "Clapton", email: "eric@dominoes.com", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/clapton.jpg')), description: 'You look wonderful tonight', neighborhood_id: 5)
 
-aretha = User.create(first_name: "Aretha", last_name: "Franklin", email: "thequeen@ofsoul.org", password: "testing", password_confirmation: "testing", img_url: 'aretha.jpg', description: 'Sock it to me. Sock it to me. Sock it to me. Sock it to me. Sock it to me. Sock it to me. Sock it to me.', neighborhood_id: 5)
+aretha = User.create(first_name: "Aretha", last_name: "Franklin", email: "thequeen@ofsoul.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/aretha.jpg')), description: 'Sock it to me. Sock it to me. Sock it to me. Sock it to me. Sock it to me. Sock it to me. Sock it to me.', neighborhood_id: 5)
 
-neil = User.create(first_name: "Neil", last_name: "Peart", email: "npeart@rush.org", password: "testing", password_confirmation: "testing", img_url: 'neilpeart.jpg',description: 'Thats why the call me, they call me the workin man', neighborhood_id: 4)
+neil = User.create(first_name: "Neil", last_name: "Peart", email: "npeart@rush.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/neilpeart.jpg')),description: 'Thats why the call me, they call me the workin man', neighborhood_id: 4)
 
-bono = User.create(first_name: "Bono", last_name: " ", email: "bono@u2.org", password: "testing", password_confirmation: "testing", img_url: 'bono.jpg',description: 'I still havent found what Im looking for.', neighborhood_id: 4)
+bono = User.create(first_name: "Bono", last_name: " ", email: "bono@u2.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/bono.jpg')),description: 'I still havent found what Im looking for.', neighborhood_id: 4)
 
-idina = User.create(first_name: "Idina", last_name: "Menzel", email: "idina@frozen.org", password: "testing", password_confirmation: "testing", img_url: 'idina.jpg',description: 'Let it goooooooooooooooooooooooooooooooooooooo', neighborhood_id: 4)
+idina = User.create(first_name: "Idina", last_name: "Menzel", email: "idina@frozen.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/idina.jpg')),description: 'Let it goooooooooooooooooooooooooooooooooooooo', neighborhood_id: 4)
 
-dr = User.create(first_name: "Dr.", last_name: "Dre", email: "dre@nwa.org", password: "testing", password_confirmation: "testing", img_url: 'dre.jpg',description: 'Keep their heads ringin', neighborhood_id: 3)
+dr = User.create(first_name: "Dr.", last_name: "Dre", email: "dre@nwa.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/dre.jpg')),description: 'Keep their heads ringin', neighborhood_id: 3)
 
-duke = User.create(first_name: "Duke", last_name: "Greene", email: "duke@dbc.com", password: "testing", password_confirmation: "testing", img_url: 'duke.jpg',description: 'That was my nickname in highschool', neighborhood_id: 1)
+duke = User.create(first_name: "Duke", last_name: "Greene", email: "duke@dbc.com", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/duke.jpg')),description: 'That was my nickname in highschool', neighborhood_id: 1)
 
-wynton = User.create(first_name: "Wynton", last_name: "Marsalis", email: "winton@jazz.org", password: "testing", password_confirmation: "testing", img_url: 'wyntonmarsalis.jpg',description: 'Invest yourself in everything you do. Theres fun in being serious.', neighborhood_id: 2)
+wynton = User.create(first_name: "Wynton", last_name: "Marsalis", email: "winton@jazz.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/wyntonmarsalis.jpg')),description: 'Invest yourself in everything you do. Theres fun in being serious.', neighborhood_id: 2)
 
-lorde = User.create(first_name: "Lorde", last_name: " ", email: "lorde@royals.org", password: "testing", password_confirmation: "testing", img_url: 'lorde.jpg',description: 'We dont care, we arent caught up in your love affair.', neighborhood_id: 3)
+lorde = User.create(first_name: "Lorde", last_name: " ", email: "lorde@royals.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/lorde.jpg')),description: 'We dont care, we arent caught up in your love affair.', neighborhood_id: 3)
 
  #Frank Sinatra
  #Skrillex
