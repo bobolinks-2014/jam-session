@@ -4,9 +4,11 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:user][:email])
     if user && user.authenticate(params[:user][:password])
       session[:user_id] = user.id
+      @neighborhood = user.neighborhood.name.downcase.gsub(/\s/,"-")
+      redirect_to "/#{@neighborhood}"
+    else
+      redirect_to root_path
     end
-
-    redirect_to "/#{user.neighborhood.name}"
   end
 
   def logout
