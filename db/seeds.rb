@@ -70,15 +70,15 @@ lorde = User.create(first_name: "Lorde", last_name: " ", email: "lorde@royals.or
 
 # Comments
 
-Comment.create(content: 'This guy was so great to play with.  Musical Genius', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
+# Comment.create(content: 'This guy was so great to play with.  Musical Genius', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
 
-Comment.create(content: 'Barf!', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
+# Comment.create(content: 'Barf!', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
 
-Comment.create(content: 'Rock on dude!', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
+# Comment.create(content: 'Rock on dude!', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
 
-Comment.create(content: 'Smoooth', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
+# Comment.create(content: 'Smoooth', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
 
-Comment.create(content: 'Legendary skills...psyche!', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
+# Comment.create(content: 'Legendary skills...psyche!', rating: rand(1..5), commenter_id: rand(1..7), receiver_id: rand(1..7))
 
 # tag-list
 
