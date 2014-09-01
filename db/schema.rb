@@ -34,7 +34,11 @@ ActiveRecord::Schema.define(version: 20140830202949) do
 
   create_table "jam_seshes", force: true do |t|
     t.string   "name"
+    t.text     "content"
     t.date     "sesh_date"
+    t.integer  "creator_id"
+    t.integer  "receiver_id"
+    t.boolean  "accepted?",   default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
