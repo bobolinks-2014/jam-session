@@ -45,7 +45,7 @@ joan = User.create(first_name: "Joan", last_name: "Jett", email: "joan@runaways.
 
 adele = User.create(first_name: "Adele", last_name: " ", email: "adele@iwin.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/adele.jpg')), description: 'We could have had it allllllllllllll.', neighborhood_id: 6)
 
-flea = User.create(first_name: "Flea", last_name: " ", email: "joan@runaways.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/flea.jpg')), description: 'With the birds I share this lonely view.', neighborhood_id: 5)
+flea = User.create(first_name: "Flea", last_name: " ", email: "flea@chilipeppers.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/flea.jpg')), description: 'With the birds I share this lonely view.', neighborhood_id: 5)
 
 eric = User.create(first_name: "Eric", last_name: "Clapton", email: "eric@dominoes.com", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/clapton.jpg')), description: 'You look wonderful tonight', neighborhood_id: 5)
 
@@ -116,21 +116,21 @@ UserInstrument.create(user: beyonce, instrument: cowbell, skill_level: rand(1..5
 
 name = ["Rockin Out", "Jazz Sesh"]
 
-rock = JamSesh.create(name: "Rockin Out", sesh_date: (Date.today-rand(30)))
-jazz = JamSesh.create(name: "Jazz Sesh", sesh_date: (Date.today-rand(30)))
-scoot = JamSesh.create(name: "Boot Scootin Boogie", sesh_date: (Date.today-rand(30)))
-duet = JamSesh.create(name: "Sweet Duet", sesh_date: (Date.today-rand(30)))
+rock = JamSesh.create(name: "Rockin Out", content: "Let's jam!", sesh_date: (Date.today-rand(30)), creator: axel, receiver: kenny, accepted?: true)
+jazz = JamSesh.create(name: "Jazz Sesh",  content: "Let's jam!",sesh_date: (Date.today-rand(30)), creator: christopher, receiver: kenny, accepted?: true)
+scoot = JamSesh.create(name: "Boot Scootin Boogie",  content: "Let's jam!",sesh_date: (Date.today-rand(30)), creator: tina, receiver: kenny, accepted?: true)
+duet = JamSesh.create(name: "Sweet Duet",  content: "Let's jam!",sesh_date: (Date.today-rand(30)), creator: joan, receiver: kenny, accepted?: true)
 
 #messages
 
-Message.create(content: "Let's meetup at the Loft to have an awesome jam sesh", sender: christopher, receiver: axel, sesh_date: (Date.today-rand(30)), name: "Awesome Sesh" )
-Message.create(content: "Let's meetup at my loft to have an awesome jam sesh", sender: axel, receiver: freddy, sesh_date: (Date.today-rand(30)), name: "Wicked Sesh" )
-Message.create(content: "Let's meetup at the Studio to have an awesome jam sesh", sender: freddy, receiver: rivers, sesh_date: (Date.today-rand(30)), name: "Rockin Sesh" )
-Message.create(content: "Let's meetup at the Hall to have an awesome jam sesh", sender: rivers, receiver: henry, sesh_date: (Date.today-rand(30)), name: "Cool Sesh" )
-Message.create(content: "Let's meetup at that cool place to have an awesome jam sesh", sender: henry, receiver: kenny, sesh_date: (Date.today-rand(30)), name: "Smooth Sesh" )
-Message.create(content: "Let's meetup at DBC to have an awesome jam sesh", sender: kenny, receiver: tina, sesh_date: (Date.today-rand(30)), name: "Mad Sesh" )
-Message.create(content: "Let's meetup to have an awesome jam sesh", sender: tina, receiver: joan, sesh_date: (Date.today-rand(30)), name: "Jam Sesh" )
-Message.create(content: "Let's meetup at the Stage to have an awesome jam sesh", sender: joan, receiver: christopher, sesh_date: (Date.today-rand(30)), name: "Jam Sesh" )
+JamSesh.create(content: "Let's meetup at the Loft to have an awesome jam sesh", creator: christopher, receiver: axel, sesh_date: (Date.today-rand(30)), name: "Awesome Sesh" )
+JamSesh.create(content: "Let's meetup at my loft to have an awesome jam sesh", creator: axel, receiver: freddy, sesh_date: (Date.today-rand(30)), name: "Wicked Sesh" )
+JamSesh.create(content: "Let's meetup at the Studio to have an awesome jam sesh", creator: freddy, receiver: rivers, sesh_date: (Date.today-rand(30)), name: "Rockin Sesh" )
+JamSesh.create(content: "Let's meetup at the Hall to have an awesome jam sesh", creator: rivers, receiver: henry, sesh_date: (Date.today-rand(30)), name: "Cool Sesh" )
+JamSesh.create(content: "Let's meetup at that cool place to have an awesome jam sesh", creator: henry, receiver: kenny, sesh_date: (Date.today-rand(30)), name: "Smooth Sesh" )
+JamSesh.create(content: "Let's meetup at DBC to have an awesome jam sesh", creator: kenny, receiver: tina, sesh_date: (Date.today-rand(30)), name: "Mad Sesh" )
+JamSesh.create(content: "Let's meetup to have an awesome jam sesh", creator: tina, receiver: joan, sesh_date: (Date.today-rand(30)), name: "Jam Sesh" )
+JamSesh.create(content: "Let's meetup at the Stage to have an awesome jam sesh", creator: joan, receiver: christopher, sesh_date: (Date.today-rand(30)), name: "Jam Sesh" )
 
 #user_jam_sesh
 
