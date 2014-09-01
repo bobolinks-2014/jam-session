@@ -2,8 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h1 {
+  font-family: 'Noto Sans', sans-serif;
+}
 
 .neighborhood_container {
+  font-family: 'Noto Sans', sans-serif;
   margin-top: 30px;
   position: center;
   padding: 40px;
@@ -13,6 +17,7 @@
 }
 
 .main-title {
+  font-family: 'Noto Sans', sans-serif;
   position: center;
 }
 

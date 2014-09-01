@@ -15,7 +15,7 @@
 </div>
 
 <div class="list-container">
-    <% @neighborhood.users.each do |user| %>
+    <% @user_instruments.each do |user| %>
     <%= link_to user_path(user) do %>
     <div class="profile-row">
           <div class="profile-pic"><li><%=image_tag(user.image.url(:thumb).to_s) %></li></div>
