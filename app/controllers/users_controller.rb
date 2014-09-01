@@ -19,11 +19,8 @@ class UsersController < ApplicationController
       respond_to do |format|
         format.html { render :_signup2 }
       end
-      # @neighborhood = @user.neighborhood.name.downcase.gsub(/\s/,"-")
-      # redirect_to "/#{@neighborhood}"
     else
       @neighborhoods = Neighborhood.all
-      # p "i have no fricking clue"
       render 'new'
     end
   end
@@ -42,6 +39,10 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def instruments
+    "HELOOOOOOOOOOOOOO" 
   end
 
 private

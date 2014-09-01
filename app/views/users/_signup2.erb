@@ -1,1 +1,14 @@
-<h1>Hello</h1>
+<%= form_for :user_instrument do |f| %>
+    <%= f.collection_select(:instrument_id, instrument_list, :id, :name) %>
+    <p id="gs">Skill Level</p>
+    <p id="skill_level">1 -- Skill Level -- 5</p>
+    <%= f.range_field(:skill_level, in: 1..5) %>
+    <p id="genres">Genres</p>
+    <% genre_list.each do |g| %>
+        <div class="current_genre">
+            <div class="genre_name"><%= g.name %></div>
+            <%= f.check_box(g.name.to_sym) %>
+        </div>
+    <% end %>
+    <div id="f2submit"><%= f.submit "Submit" %><div>
+<% end %>
