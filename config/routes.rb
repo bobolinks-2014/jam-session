@@ -18,6 +18,8 @@ JamSession::Application.routes.draw do
   #   resources :products
   resources :users
 
+
+  get '/:neighborhood/:instrument' => 'neighborhoods#instruments', :as => 'instruments'
   get '/:neighborhood' => 'neighborhoods#show', :as => 'neighborhood'
   # get '/hyde-park' => 'neighborhoods#show'
   # get '/south-loop' => 'neighborhoods#show'

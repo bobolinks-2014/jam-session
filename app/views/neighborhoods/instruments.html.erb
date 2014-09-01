@@ -1,8 +1,9 @@
-<div class="neighborhood_container">
+ <div class="neighborhood_container">
   <div class="main-title"></div>
+    <h1><%= @instrument.name %></h1>
       <h1>Musicians available to jam in <%= @neighborhood.name %></h1>
 
-  <div class="image-grid">
+ <div class="image-grid">
     <ul class="small-block-grid-5">
       <li class="guitar"><%= link_to instruments_path(@neighborhood, "Guitar") do %><%= image_tag('guitar.png') %><% end %></li>
       <li class="microphone"><%= link_to instruments_path(@neighborhood, "Vocals") do %><%= image_tag('microphone.png') %><% end %></li>
@@ -13,10 +14,8 @@
   </div>
 </div>
 
-<!-- add a filters class with two dropdowns or two buttons that sort by skill level and genre -->
-  
-  <div class="list-container">
-    <% @neighborhood.users.each do |user| %>
+<div class="list-container">
+    <% @user_instruments.each do |user| %>
     <%= link_to user_path(user) do %>
     <div class="profile-row">
           <div class="profile-pic"><li><%=image_tag(user.image.url(:thumb).to_s) %></li></div>
@@ -35,8 +34,3 @@
     <% end %>
     <% end %>
   </div>
-
-
-
-
-
