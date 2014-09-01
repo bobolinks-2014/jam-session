@@ -5,7 +5,7 @@ class UserInstrumentsController < ApplicationController
   end
 
   def create
-    p params[:user_instrument]
+    params[:user_instrument].merge!(user_id: current_user.id)
     @user_instrument = UserInstrument.create(user_instruments_params)
     @neighborhood = current_user.neighborhood.name.downcase.gsub(/\s/,"-")
     redirect_to "/#{@neighborhood}"
