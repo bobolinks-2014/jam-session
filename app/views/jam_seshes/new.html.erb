@@ -1,0 +1,16 @@
+<div class="feedback-container">
+
+ <%= form_for @jam_sesh do |f| %>
+
+    <%= f.text_field :name, :autofocus => true, placeholder: 'Jam Sesh Name' %>
+    <%= f.date_field :sesh_date, placeholder: 'Last Name', class: 'field'%>
+    <%= f.email_field :email, placeholder: 'Email', class: 'field'%>
+    <%= f.password_field :password, placeholder: 'Password', class: 'field'%>
+    <%= f.submit "Submit" %>
+
+<% end %>
+
+
+
+
+</div>
