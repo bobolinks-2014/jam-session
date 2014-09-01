@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
     has_many :sent_messages, class_name: "Message", foreign_key: "sender_id"
     has_many :user_jam_seshes
     has_many :jam_seshes, through: :user_jam_seshes
+    has_many :created_jam_seshes, class_name: "JamSesh", foreign_key: "creator_id"
 
     mount_uploader :image, ImageUploader
 
@@ -38,8 +39,16 @@ class User < ActiveRecord::Base
         return partners
     end
 
-    def get_messages
-        self.received_messages
+    def get_jam_seshes
+        self.jam_seshes
+    end
+
+    def get_new_requests
+        JamSesh.where(receiver:self, accepted?: false)
+    end
+
+    def get_accepted_requests
+        JamSesh.where(receiver:self, accepted?: true)
     end
 
 end
