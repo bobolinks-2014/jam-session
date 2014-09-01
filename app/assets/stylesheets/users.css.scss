@@ -35,6 +35,10 @@
   margin: 20px;
 }
 
+.profile-info h1 {
+  font-family: 'Noto Sans', sans-serif;
+}
+
 .description {
   position: relative;
   float:left;
@@ -113,9 +117,18 @@
   padding-left: 20px;
 }
 
+.skill-info h5 {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.skill-info h4 {
+  font-family: 'Noto Sans', sans-serif;
+}
+
 .skill-info h3 {
   text-align: center;
 }
+
 
 h4.subheader{
   text-align: center;
@@ -125,6 +138,11 @@ h4.subheader{
   position:relative;
   float:left;
   margin: 10px;
+}
+
+.genre-info h4 {
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .user-seshes {
@@ -203,7 +221,7 @@ h4.subheader{
   text-align: center
 }
 
-.messages {
+.seshes {
   position:relative;
   float:left;
   clear:left;
@@ -211,11 +229,11 @@ h4.subheader{
   margin:20px;
 }
 
-.messages h2 {
+.seshes h2 {
   font-family: 'Noto Sans', sans-serif;
 }
 
-.new-messages {
+.new-seshes {
   display:relative;
   float:left;
   width: 200px;
@@ -232,23 +250,106 @@ p.from {
   font-family: 'Noto Sans', sans-serif;
 }
 
-.new-messages p {
+.new-seshes p {
   text-align: center;
   font-size: 90%;
+  margin:5px auto;
+  padding:0;
 }
 
-.new-messages button {
-  display:block;
+.new-seshes button.button {
+  position: relative;
   margin: 0px auto;
   padding: 8px;
   border-radius: 10px;
 }
 
-.new-messages h5 {
+.new-seshes h5 {
   font-family: 'Noto Sans', sans-serif;
   text-align: center;
   font-size: 90%;
 }
+
+.left-column {
+  width: 300px;
+  float:left;
+}
+
+.right-column {
+  width: 300px;
+  float:right;
+}
+
+.user-bottom-container input {
+  display:block;
+  width: 300px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.user-bottom-container textarea {
+  position: relative;
+  float:left;
+  width: 400px;
+  border-radius: 10px;
+  margin: 16px auto;
+  padding: 5px;
+}
+
+.user-bottom-container input[type="submit"]{
+  position: relative;
+  clear: left;
+  width: 200px;
+  margin: 10px auto;
+  padding: 5px;
+  margin-bottom: 50px;
+  background-color: #333366;
+  color: ghostwhite;
+  border-radius: 10px;
+  border:none;
+}
+
+.request-sesh {
+  width: 900px;
+  margin:auto;
+}
+
+.request-sesh h3 {
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.errors {
+  margin-bottom: 40px;
+}
+
+.errors li {
+  display: block;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.errors h5 {
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center
+}
+
+.accepted-seshes {
+  display:relative;
+  float:left;
+  width: 200px;
+  height: 240px;
+  margin: 10px;
+  padding:10px;
+  border: 1px dotted grey;
+  border-radius: 10px;
+}
+
+.accepted-seshes p {
+  text-align: center;
+}
+
 
 /********* Signup & Edit CSS **********/
 

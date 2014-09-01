@@ -4,7 +4,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @comment = JamSesh.new
     @jams = @user.get_partners
-    @messages = @user.get_messages
+    @seshes = @user.get_new_requests
+    @jam_sesh = JamSesh.new
+    @accepted_seshes = @user.get_accepted_requests
   end
 
   def new

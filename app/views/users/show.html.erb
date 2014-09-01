@@ -43,7 +43,7 @@
     <% if current_user == @user %>
 
       <div class="user-seshes">
-        <h2>Past Jam Seshes</h2>
+        <h2>All Jam Seshes</h2>
         <% @user.user_jam_seshes.each do |sesh| %>
           <div class="sesh-info">
             <h5 class="subheader"><%= sesh.jam_sesh.name %></h5>
@@ -74,17 +74,27 @@
         <% end %>
       </div>
 
-      <div class="messages">
-        <h2>New Messages</h2>
-        <% @messages.each do |msg| %>
-          <div class="new-messages">
-            <p class="from">From: <%= msg.sender.full_name %></p>
-            <h5><%= msg.name %></h5>
-            <p class="msg"><%= msg.content %></p>
-            <p class="msg">Sesh Date: <%= msg.format_date %></p>
-            <%= link_to sesh_path do %>
+      <div class="seshes">
+        <h2>New Jam Sesh Requests</h2>
+        <% @seshes.each do |sesh| %>
+          <div class="new-seshes">
+            <p class="from">From: <%= sesh.creator.full_name %></p>
+            <p class="subheader"><%= sesh.format_date %></p>
+            <p class="sesh"><%= sesh.content %></p>
+            <%= link_to reply_path(sesh) do %>
               <button class="button">Accept!</button>
             <% end %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="seshes">
+        <h2>Accepted Jam Sesh Requests</h2>
+        <% @accepted_seshes.each do |sesh| %>
+          <div class="accepted-seshes">
+            <p class="from"><%= sesh.creator.full_name %></p>
+            <p class="subheader"><%= sesh.format_date %></p>
+            <p class="sesh"><%= sesh.content %></p>
           </div>
         <% end %>
       </div>
@@ -92,9 +102,27 @@
     <% else %>
       <!-- PUBLIC profile page -->
 
-      <div class="user-bottom-container">
-        <textarea>Contact <%=@user.first_name %> to set up a jam session...</textarea>
-        <a href="" class = "button" >Send</a>
+      <div class="request-sesh">
+        <h3> Set up a Jam Sesh! </h3>
+        <%= form_for @jam_sesh do |f| %>
+          <div class="left-column">
+            <%= f.hidden_field :receiver_id, :value => @user.id %>
+            <%= f.text_field :name, :autofocus => true, placeholder: 'Jam Sesh Name' %>
+            <%= f.date_field :sesh_date %>
+          </div>
+          <div class="right-column">
+            <%= f.text_area :content, placeholder: 'Add a message...' %>
+          </div>
+          <%= f.submit "Submit", :confirm => 'Seshhhhhh!' %>
+        <% end %>
+        <% if flash[:jam_sesh_errors] != nil %>
+          <div class="errors">
+            <h5>Sorry! We weren't able to process your request:</h5>
+            <% flash[:jam_sesh_errors].each do |error| %>
+              <li><%= error.join %></li>
+            <% end %>
+          </div>
+        <% end %>
       </div>
 
     <% end %>
