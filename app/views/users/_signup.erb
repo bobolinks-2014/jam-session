@@ -10,7 +10,7 @@
 
     <%= f.file_field :image %>
     <%= f.text_area :description, placeholder: 'Tell us a little about yourself...' %>
-    <%= f.collection_select(:neighborhood_id, @neighborhoods, :id, :name, :include_blank => "Neighborhood") %>
+    <%= f.collection_select(:neighborhood_id, @neighborhoods, :id, :name) %>
     <%= f.submit "Submit" %>
 
 <% end %>

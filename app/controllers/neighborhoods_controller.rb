@@ -1,4 +1,5 @@
 class NeighborhoodsController < ApplicationController
+
   def instruments
     
     @neighborhood = Neighborhood.find(params[:neighborhood].to_i)

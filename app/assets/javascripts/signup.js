@@ -1,17 +1,23 @@
 	$('form.new_user').submit(function(event) {
 
-		event.preventDefault()
+		event.preventDefault();
+		console.log("helloo????????? anybody????");
 
 		var jqXHR = $.ajax({
 			type: "POST",
-			url: $(this).find("form").attr("action"),
+			url: $(this).attr("action"),
 			data: $(this).serialize(),
-			dataType: "html"
+			dataType: "html",
 		});
+
+		console.log("this is after the post");
 		
 		jqXHR.done(function(form) {
-			$("#signup_head").text("Add your instruments")
-			$(this).remove()
+			console.log("inside the done function");
+			debugger;
+			$("#signup_head").text("Add your instruments");
+			$(this).remove();
+			$(".signup_container").append(form);
 		}.bind(this));
 
 	})

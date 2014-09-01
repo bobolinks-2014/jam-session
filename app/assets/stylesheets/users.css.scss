@@ -260,7 +260,7 @@ p.from {
   width: 550px;
   margin: auto;
   border: 5px solid black;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 
 .signup_container h3 {
@@ -310,6 +310,46 @@ p.from {
   padding: 12px 20px;
   border-radius: 3px;
 }
+
+#skill_level {
+  position: relative;
+  color: white;
+}
+
+.genre_name {
+  display: inline;
+  color: white;
+}
+
+.current_genre {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#genres {
+  color: white;
+  position: relative;
+  top: 10px;
+  font-size: 24px;
+}
+
+#gs {
+  color: white;
+  position: relative;
+  top: 14px;
+  font-size: 24px;
+}
+
+#user_instument_instrument_id {
+  margin-top: 15px;
+  padding-top: 20px;
+}
+
+#f2submit {
+  display: block;
+}
+
+
 
 
 
