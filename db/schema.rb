@@ -16,15 +16,6 @@ ActiveRecord::Schema.define(version: 20140830202949) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "comments", force: true do |t|
-    t.text     "content"
-    t.integer  "rating"
-    t.integer  "commenter_id"
-    t.integer  "receiver_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "instruments", force: true do |t|
     t.string   "name"
     t.string   "icon"
@@ -39,16 +30,6 @@ ActiveRecord::Schema.define(version: 20140830202949) do
     t.integer  "creator_id"
     t.integer  "receiver_id"
     t.boolean  "accepted?",   default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "messages", force: true do |t|
-    t.string   "content"
-    t.string   "name"
-    t.integer  "sender_id"
-    t.integer  "receiver_id"
-    t.date     "sesh_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

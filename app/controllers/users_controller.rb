@@ -19,9 +19,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      respond_to do |format|
-        format.html { render :_signup2 }
-      end
+      # respond_to do |format|
+      #   format.html { render :_signup2 }
+      # end
+      redirect_to new_user_user_instrument_path(@user)
     else
       @neighborhoods = Neighborhood.all
       render 'new'
@@ -41,10 +42,6 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
-  end
-
-  def instruments
-    "HELOOOOOOOOOOOOOO" 
   end
 
 private
