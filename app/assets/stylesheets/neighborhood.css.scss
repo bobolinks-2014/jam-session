@@ -2,8 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h1 {
+  font-family: 'Noto Sans', sans-serif;
+}
 
 .neighborhood_container {
+  font-family: 'Noto Sans', sans-serif;
   margin-top: 30px;
   position: center;
   padding: 40px;
@@ -13,10 +17,13 @@
 }
 
 .main-title {
+  font-family: 'Noto Sans', sans-serif;
   position: center;
 }
 
-.image-grid img {
+.small-block-grid-5 {
+ list-style: none;
+ display: inline;
  margin-top: 20px;
  border-bottom: 10px;
  border-bottom-color: #333366;
@@ -24,6 +31,13 @@
  height: auto;
 }
 
+.small-block-grid-5 img {
+ opacity: 0.5;
+}
+
+.small-block-grid-5 img:hover {
+ opacity: 1.0;
+}
 
 .list-container {
   position: center;
@@ -68,14 +82,15 @@
 }
 
 .instrument {
-  padding: 10px;
-  position: relative;
-  left: 25%;
-  bottom: 70%
+  padding: 20px;
+  /*position: relative;*/
+/*  left: 25%;
+  bottom: 70%*/
 }
 
 .skills {
-  padding: 20px;
+  padding: 10px;
+  position: relative;
  /* left: 25%;
   bottom: 70%*/
 }
@@ -84,9 +99,12 @@
   padding: 10px;
   font-size: 20px;
   font-style: bold;
+  position: relative;
 }
 
 .genres {
+  padding: 20px;
   font-size: 20px;
   font-style: bold;
+  position: relative;
 }

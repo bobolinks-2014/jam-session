@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @comment = JamSesh.new
     @jams = @user.get_partners
+    @messages = @user.get_messages
   end
 
   def new
@@ -25,7 +26,6 @@ class UsersController < ApplicationController
     end
   end
 
-  #edit
   def edit
     @user = User.find(params[:id])
   end

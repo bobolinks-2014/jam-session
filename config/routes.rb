@@ -8,6 +8,8 @@ JamSession::Application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   post '/sessions/login' => 'sessions#login'
   get '/sessions/logout' => 'sessions#logout', :as => 'logout'
+  get '/jam_seshes/new' => 'jam_seshes#new', :as => 'sesh'
+  post '/jam_seshes/create' => 'jam_seshes#create'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
@@ -16,6 +18,8 @@ JamSession::Application.routes.draw do
   #   resources :products
   resources :users
 
+
+  get '/:neighborhood/:instrument' => 'neighborhoods#instruments', :as => 'instruments'
   get '/:neighborhood' => 'neighborhoods#show', :as => 'neighborhood'
   # get '/hyde-park' => 'neighborhoods#show'
   # get '/south-loop' => 'neighborhoods#show'

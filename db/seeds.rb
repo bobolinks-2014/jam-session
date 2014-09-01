@@ -25,7 +25,7 @@ lakeview = Neighborhood.create(name: 'Lakeview')
 hyde = Neighborhood.create(name: 'Hyde Park')
 river = Neighborhood.create(name: 'River North')
 
-christopher = User.create(first_name: "Christopher", last_name: "Walken", email: "needmore@cowbell.org", password: "testing", password_confirmation: "testing", iimage: File.open(File.join(Rails.root, 'app/assets/images/walken.jpg')), description: 'I got a fevah, and the only prescription...is more cowbell', neighborhood: bucktown)
+christopher = User.create(first_name: "Christopher", last_name: "Walken", email: "needmore@cowbell.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/walken.jpg')), description: 'I got a fevah, and the only prescription...is more cowbell', neighborhood: bucktown)
 
 axel = User.create(first_name: "Axel", last_name: "Rose", email: "sweetchild@omine.org", password: "testing", password_confirmation: "testing", image: File.open(File.join(Rails.root, 'app/assets/images/axl_rose.jpeg')), description: 'Nanananananannana neeee neeeee', neighborhood: bucktown)
 
@@ -123,14 +123,14 @@ duet = JamSesh.create(name: "Sweet Duet", sesh_date: (Date.today-rand(30)))
 
 #messages
 
-Message.create(content: "Let's meetup at the Loft to have an awesome jam sesh", sender: christopher, receiver: axel )
-Message.create(content: "Let's meetup at my loft to have an awesome jam sesh", sender: axel, receiver: freddy )
-Message.create(content: "Let's meetup at the Studio to have an awesome jam sesh", sender: freddy, receiver: rivers )
-Message.create(content: "Let's meetup at the Hall to have an awesome jam sesh", sender: rivers, receiver: henry )
-Message.create(content: "Let's meetup at that cool place to have an awesome jam sesh", sender: henry, receiver: kenny )
-Message.create(content: "Let's meetup at DBC to have an awesome jam sesh", sender: kenny, receiver: tina )
-Message.create(content: "Let's meetup to have an awesome jam sesh", sender: tina, receiver: joan )
-Message.create(content: "Let's meetup at the Stage to have an awesome jam sesh", sender: joan, receiver: christopher )
+Message.create(content: "Let's meetup at the Loft to have an awesome jam sesh", sender: christopher, receiver: axel, sesh_date: (Date.today-rand(30)), name: "Awesome Sesh" )
+Message.create(content: "Let's meetup at my loft to have an awesome jam sesh", sender: axel, receiver: freddy, sesh_date: (Date.today-rand(30)), name: "Wicked Sesh" )
+Message.create(content: "Let's meetup at the Studio to have an awesome jam sesh", sender: freddy, receiver: rivers, sesh_date: (Date.today-rand(30)), name: "Rockin Sesh" )
+Message.create(content: "Let's meetup at the Hall to have an awesome jam sesh", sender: rivers, receiver: henry, sesh_date: (Date.today-rand(30)), name: "Cool Sesh" )
+Message.create(content: "Let's meetup at that cool place to have an awesome jam sesh", sender: henry, receiver: kenny, sesh_date: (Date.today-rand(30)), name: "Smooth Sesh" )
+Message.create(content: "Let's meetup at DBC to have an awesome jam sesh", sender: kenny, receiver: tina, sesh_date: (Date.today-rand(30)), name: "Mad Sesh" )
+Message.create(content: "Let's meetup to have an awesome jam sesh", sender: tina, receiver: joan, sesh_date: (Date.today-rand(30)), name: "Jam Sesh" )
+Message.create(content: "Let's meetup at the Stage to have an awesome jam sesh", sender: joan, receiver: christopher, sesh_date: (Date.today-rand(30)), name: "Jam Sesh" )
 
 #user_jam_sesh
 
