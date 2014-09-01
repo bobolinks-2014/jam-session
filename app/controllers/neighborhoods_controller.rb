@@ -1,9 +1,9 @@
-class NeighborhoodsController < ApplicationController
+ class NeighborhoodsController < ApplicationController
 
   def instruments
-    
+
     @neighborhood = Neighborhood.find(params[:neighborhood].to_i)
-   
+
     @instrument = Instrument.find_by_name(params[:instrument])
     @users = User.where(neighborhood_id: @neighborhood.id)
     users_array = UserInstrument.where(instrument_id: @instrument.id).map { |instrument| instrument.user }

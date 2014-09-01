@@ -45,8 +45,12 @@ h1 {
 }
 
 .profile-pic {
-  left: 100%;
+  width: 100%;
   border-radius: 10px;
+}
+
+.profile-pic img {
+  margin:auto;
 }
 
 .profile-row {

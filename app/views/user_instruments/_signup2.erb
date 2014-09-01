@@ -1,9 +1,9 @@
 <%= form_for @user_instrument, url: user_user_instruments_path do |f| %>
     <%= f.collection_select(:instrument_id, instrument_list, :id, :name) %>
     <div class="skills">
-    <h3>Skill Level</h3>
-    <p id="skill_level">1 -- Skill Level -- 5</p>
-    <%= f.range_field(:skill_level, in: 1..5) %>
-     </div>
+      <h3>Skill Level</h3>
+      <p id="skill_level">1 -- Skill Level -- 5</p>
+      <%= f.range_field(:skill_level, in: 1..5) %>
+    </div>
     <div id="f2submit"><%= f.submit "Submit" %><div>
 <% end %>
