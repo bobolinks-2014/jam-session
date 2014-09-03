@@ -12,6 +12,7 @@ h1 {
   position: center;
   padding: 40px;
   width: 100%;
+  min-width: 932px;
   background-color: ghostwhite;
   border-radius: 2px;
 }
@@ -42,15 +43,7 @@ h1 {
 .list-container {
   position: center;
   width: 100%;
-}
-
-.profile-pic {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.profile-pic img {
-  margin:auto;
+  min-width: 970px;
 }
 
 .profile-row {
@@ -64,51 +57,75 @@ h1 {
   border-spacing: 10px;
   list-style: none;
   width: 30%;
-  height: auto;
+  min-width: 280px;
+  height: 640px;
 }
 
 
 .profile-row li {
   position: relative;
-  display: inline-block;
+  display: block;
 }
 
 .profile-row img {
-   position: relative;
-  display: inline-block;
+  position: relative;
+  display: block;
+}
+
+.profile-pic {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.profile-pic.hood img {
+  display:block;
+  position:relative;
+  margin:20px auto;
+  float:none;
 }
 
 .name {
-  font-size: 35px;
+  font-size: 30px;
   position: relative;
-/*  left: 25%;
-  bottom: 85%*/
+  text-align:center;
+  padding: 2px;
+}
+
+.name li {
+  text-align:center;
+  line-height: 35px;
 }
 
 .instrument {
   padding: 20px;
-  /*position: relative;*/
-/*  left: 25%;
-  bottom: 70%*/
+  margin:auto;
+}
+
+.instrument img {
+  margin:auto;
 }
 
 .skills {
   padding: 10px;
+  margin:auto;
   position: relative;
- /* left: 25%;
-  bottom: 70%*/
-}
-
-.skills {
-  padding: 10px;
-  font-size: 20px;
+  font-size: 25px;
   font-style: bold;
   position: relative;
+}
+
+.skills li {
+  text-align:center;
+}
+
+.smaller {
+  font-size: 16px;
 }
 
 .genres {
-  padding: 20px;
+  padding: 10px;
   font-size: 20px;
   font-style: bold;
   position: relative;
+  text-align:center;
 }

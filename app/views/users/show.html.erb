@@ -23,13 +23,13 @@
       </div>
       <div class="instrument-info">
         <div class="skill-info">
-          <h5>Skill Level</h5>
-          <h4 class="subheader"><%= user_ins.skill_level %></h4>
+          <h5 class="subheader">Skill Level</h5>
+          <h4><%= user_ins.skill_level %></h4>
         </div>
         <div class="genre-info">
-          <h5>Genres</h5>
+          <h5 class="subheader">Genres</h5>
         <% user_ins.genre_list.each do |genre| %>
-            <h4 class="subheader"><%= genre %></h4>
+            <h4><%= genre %></h4>
         <% end %>
         </div>
       </div>
