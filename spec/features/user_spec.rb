@@ -2,8 +2,8 @@ require 'rails_helper'
 
 feature 'User browsing the website' do
 
-	before :each do 
-		@user = User.new(email: "mclovin@example.com", password: "mclovin") 
+	before :each do
+		@user = User.new(email: "mclovin@example.com", password: "mclovin")
 	end
 
 	feature 'User on homepage' do
@@ -31,11 +31,11 @@ feature 'User browsing the website' do
 		end
 	end
 
-	feature 'Clicking on neighborhood' do
+	pending 'Clicking on neighborhood' do
 		it "will go to a neighborhood page" do
 			visit '/rogers-park'
 			# my_link = find(:xpath, "//a[contains(@href,'/rogers-park')]")
-			# my_link.click
+			# expect(page).to have_content 'Rogers Park'
 
 		end
 	end
